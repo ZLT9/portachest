@@ -1,0 +1,25 @@
+{
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:all_mods_loaded",
+      "values": [
+        "variantvanillablocks"
+      ]
+    }
+  ],
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "LCL"
+  ],
+  "key": {
+    "L": {
+      "item": "minecraft:lead"
+    },
+    "C": {
+      "item": "variantvanillablocks:spruce_chest"
+    }
+  },
+  "result": {
+    "item": "portachest:portable_chest"
+  }
+}

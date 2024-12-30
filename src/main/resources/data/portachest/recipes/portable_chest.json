@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "LCL"
+  ],
+  "key": {
+    "L": {
+      "item": "minecraft:lead"
+    },
+    "C": {
+      "item": "minecraft:chest"
+    }
+  },
+  "result": {
+    "item": "portachest:portable_chest"
+  }
+}

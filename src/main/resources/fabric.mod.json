@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "id": "portachest",
+  "version": "${version}",
+  "name": "Port-a-Chest",
+  "description": "Adds portable chests.",
+  "authors": [
+    "ZLT"
+  ],
+  "contact": {},
+  "license": "MIT",
+  "icon": "assets/portachest/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "net.zlt.portachest.Portachest"
+    ],
+    "client": [
+      "net.zlt.portachest.PortachestClient"
+    ]
+  },
+  "mixins": [
+    "portachest.mixins.json",
+    {
+      "config": "portachest.client.mixins.json",
+      "environment": "client"
+    }
+  ],
+  "depends": {
+    "fabricloader": ">=0.16.9",
+    "fabric-key-binding-api-v1": "*",
+    "minecraft": "~1.20.1",
+    "java": ">=17",
+    "fabric-api": "*"
+  }
+}
