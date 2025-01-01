@@ -1,3 +1,4 @@
 {
-  "item.portachest.portable_chest": "Cofre portátil"
+  "item.portachest.portable_chest": "Cofre portátil",
+  "key.portachest.open_portable_chest": "Abrir cofre portátil"
 }
