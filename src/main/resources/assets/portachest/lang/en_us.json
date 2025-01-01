@@ -1,5 +1,6 @@
 {
   "item.portachest.portable_chest": "Portable Chest",
   "key.portachest.open_portable_chest": "Open Portable Chest",
-  "category.portachest.portachest": "Port-a-Chest"
+  "category.portachest.portachest": "Port-a-Chest",
+  "itemGroup.portachest": "Port-a-Chest"
 }

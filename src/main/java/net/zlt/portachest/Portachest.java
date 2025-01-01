@@ -12,6 +12,7 @@ import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.Pair;
+import net.zlt.portachest.item.AllItemGroups;
 import net.zlt.portachest.item.AllItems;
 import net.zlt.portachest.item.PortableChestItem;
 import net.zlt.portachest.networking.AllNetworkingConstants;
@@ -29,6 +30,7 @@ public class Portachest implements ModInitializer {
     public void onInitialize() {
         AllScreenHandlerTypes.init();
         AllItems.init();
+        AllItemGroups.init();
 
         ServerPlayNetworking.registerGlobalReceiver(AllNetworkingConstants.OPEN_PORTABLE_CHEST_PACKET_ID, (server, player, handler, buf, responseSender) -> server.execute(() -> {
             ItemStack chestStack = player.getEquippedStack(EquipmentSlot.CHEST);
