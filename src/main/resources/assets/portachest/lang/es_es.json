@@ -1,4 +1,14 @@
 {
   "item.portachest.portable_chest": "Cofre portátil",
+  "item.portachest.portable_spruce_chest": "Cofre de abeto portátil",
+  "item.portachest.portable_birch_chest": "Cofre de abedul portátil",
+  "item.portachest.portable_jungle_chest": "Cofre de jungla portátil",
+  "item.portachest.portable_acacia_chest": "Cofre de acacia portátil",
+  "item.portachest.portable_dark_oak_chest": "Cofre de roble oscuro portátil",
+  "item.portachest.portable_mangrove_chest": "Cofre de mangle portátil",
+  "item.portachest.portable_cherry_chest": "Cofre de cerezo portátil",
+  "item.portachest.portable_bamboo_chest": "Cofre de bambú portátil",
+  "item.portachest.portable_crimson_chest": "Cofre carmesí portátil",
+  "item.portachest.portable_warped_chest": "Cofre distorsionado portátil",
   "key.portachest.open_portable_chest": "Abrir cofre portátil"
 }

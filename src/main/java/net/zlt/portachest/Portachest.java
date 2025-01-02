@@ -12,6 +12,7 @@ import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.Pair;
+import net.zlt.portachest.compat.Mods;
 import net.zlt.portachest.item.AllItemGroups;
 import net.zlt.portachest.item.AllItems;
 import net.zlt.portachest.item.PortableChestItem;
@@ -28,6 +29,7 @@ public class Portachest implements ModInitializer {
 
     @Override
     public void onInitialize() {
+        Mods.init();
         AllScreenHandlerTypes.init();
         AllItems.init();
         AllItemGroups.init();

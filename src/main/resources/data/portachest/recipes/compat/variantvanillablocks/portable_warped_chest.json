@@ -16,10 +16,10 @@
       "item": "minecraft:lead"
     },
     "C": {
-      "item": "variantvanillablocks:bamboo_chest"
+      "item": "variantvanillablocks:warped_chest"
     }
   },
   "result": {
-    "item": "portachest:portable_chest"
+    "item": "portachest:portable_warped_chest"
   }
 }

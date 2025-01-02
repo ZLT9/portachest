@@ -16,10 +16,10 @@
       "item": "minecraft:lead"
     },
     "C": {
-      "item": "variantvanillablocks:acacia_chest"
+      "item": "variantvanillablocks:jungle_chest"
     }
   },
   "result": {
-    "item": "portachest:portable_chest"
+    "item": "portachest:portable_jungle_chest"
   }
 }

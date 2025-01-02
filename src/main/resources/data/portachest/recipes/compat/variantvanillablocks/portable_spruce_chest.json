@@ -16,10 +16,10 @@
       "item": "minecraft:lead"
     },
     "C": {
-      "item": "variantvanillablocks:jungle_chest"
+      "item": "variantvanillablocks:spruce_chest"
     }
   },
   "result": {
-    "item": "portachest:portable_chest"
+    "item": "portachest:portable_spruce_chest"
   }
 }

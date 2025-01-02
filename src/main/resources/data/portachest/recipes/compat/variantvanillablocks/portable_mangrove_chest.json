@@ -16,10 +16,10 @@
       "item": "minecraft:lead"
     },
     "C": {
-      "item": "variantvanillablocks:dark_oak_chest"
+      "item": "variantvanillablocks:mangrove_chest"
     }
   },
   "result": {
-    "item": "portachest:portable_chest"
+    "item": "portachest:portable_mangrove_chest"
   }
 }

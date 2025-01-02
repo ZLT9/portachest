@@ -1,6 +1,16 @@
 {
   "replace": false,
   "values": [
-    "portachest:portable_chest"
+    "portachest:portable_chest",
+    "portachest:portable_spruce_chest",
+    "portachest:portable_birch_chest",
+    "portachest:portable_jungle_chest",
+    "portachest:portable_acacia_chest",
+    "portachest:portable_cherry_chest",
+    "portachest:portable_dark_oak_chest",
+    "portachest:portable_mangrove_chest",
+    "portachest:portable_bamboo_chest",
+    "portachest:portable_warped_chest",
+    "portachest:portable_crimson_chest"
   ]
 }
