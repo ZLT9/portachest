@@ -26,7 +26,7 @@ import java.util.Optional;
 
 @Environment(EnvType.CLIENT)
 public class PortableChestFeatureRenderer extends FeatureRenderer<AbstractClientPlayerEntity, PlayerEntityModel<AbstractClientPlayerEntity>> {
-    private static final PortableChestModel portableChestModel = new PortableChestModel(PortableChestModel.getTexturedModelData().createModel());
+    private static final PortableChestModel MODEL = new PortableChestModel(PortableChestModel.getTexturedModelData().createModel());
     private static final Identifier TEXTURE_ID = Portachest.asId("textures/entity/portable_chest.png");
 
     public PortableChestFeatureRenderer(FeatureRendererContext<AbstractClientPlayerEntity, PlayerEntityModel<AbstractClientPlayerEntity>> context) {
@@ -61,7 +61,7 @@ public class PortableChestFeatureRenderer extends FeatureRenderer<AbstractClient
         matrices.push();
         matrices.translate(-0.25, 0, 0.125);
         getContextModel().body.rotate(matrices);
-        portableChestModel.render(matrices, vertexConsumers.getBuffer(RenderLayer.getEntitySolid(TEXTURE_ID)), light, OverlayTexture.DEFAULT_UV, 1.0f, 1.0f, 1.0f, 1.0f);
+        MODEL.render(matrices, vertexConsumers.getBuffer(RenderLayer.getEntitySolid(TEXTURE_ID)), light, OverlayTexture.DEFAULT_UV, 1.0f, 1.0f, 1.0f, 1.0f);
         matrices.pop();
     }
 }
