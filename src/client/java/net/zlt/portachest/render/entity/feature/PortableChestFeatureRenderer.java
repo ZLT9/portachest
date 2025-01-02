@@ -17,6 +17,7 @@ import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.Pair;
+import net.zlt.portachest.Portachest;
 import net.zlt.portachest.compat.Mods;
 import net.zlt.portachest.item.PortableChestItem;
 import net.zlt.portachest.render.entity.model.PortableChestModel;
@@ -26,6 +27,7 @@ import java.util.Optional;
 @Environment(EnvType.CLIENT)
 public class PortableChestFeatureRenderer extends FeatureRenderer<AbstractClientPlayerEntity, PlayerEntityModel<AbstractClientPlayerEntity>> {
     private static final PortableChestModel portableChestModel = new PortableChestModel(PortableChestModel.getTexturedModelData().createModel());
+    private static final Identifier TEXTURE_ID = Portachest.asId("textures/entity/portable_chest.png");
 
     public PortableChestFeatureRenderer(FeatureRendererContext<AbstractClientPlayerEntity, PlayerEntityModel<AbstractClientPlayerEntity>> context) {
         super(context);
@@ -59,7 +61,7 @@ public class PortableChestFeatureRenderer extends FeatureRenderer<AbstractClient
         matrices.push();
         matrices.translate(-0.25, 0, 0.125);
         getContextModel().body.rotate(matrices);
-        portableChestModel.render(matrices, vertexConsumers.getBuffer(RenderLayer.getEntitySolid(new Identifier("textures/entity/horse/donkey.png"))), light, OverlayTexture.DEFAULT_UV, 1.0f, 1.0f, 1.0f, 1.0f);
+        portableChestModel.render(matrices, vertexConsumers.getBuffer(RenderLayer.getEntitySolid(TEXTURE_ID)), light, OverlayTexture.DEFAULT_UV, 1.0f, 1.0f, 1.0f, 1.0f);
         matrices.pop();
     }
 }

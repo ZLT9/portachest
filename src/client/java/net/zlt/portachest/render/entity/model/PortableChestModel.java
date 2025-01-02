@@ -12,7 +12,7 @@ public class PortableChestModel extends Model {
     public static TexturedModelData getTexturedModelData() {
         ModelData modelData = new ModelData();
         ModelPartData modelPartData = modelData.getRoot();
-        ModelPartBuilder modelPartBuilder = ModelPartBuilder.create().uv(26, 21).cuboid(0.0f, 0.0f, 0.0f, 8.0f, 8.0f, 3.0f);
+        ModelPartBuilder modelPartBuilder = ModelPartBuilder.create().uv(0, 0).cuboid(0.0f, 0.0f, 0.0f, 8.0f, 8.0f, 3.0f);
         modelPartData.addChild("portable_chest", modelPartBuilder, ModelTransform.NONE);
         return TexturedModelData.of(modelData, 64, 64);
     }
