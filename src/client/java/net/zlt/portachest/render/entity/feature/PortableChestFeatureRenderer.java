@@ -1,12 +1,10 @@
 package net.zlt.portachest.render.entity.feature;
 
-import dev.emi.trinkets.TrinketsMain;
 import dev.emi.trinkets.api.SlotReference;
 import dev.emi.trinkets.api.TrinketComponent;
 import dev.emi.trinkets.api.TrinketsApi;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
-import net.fabricmc.loader.api.FabricLoader;
 import net.minecraft.client.network.AbstractClientPlayerEntity;
 import net.minecraft.client.render.OverlayTexture;
 import net.minecraft.client.render.RenderLayer;
@@ -19,6 +17,7 @@ import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.Pair;
+import net.zlt.portachest.compat.Mods;
 import net.zlt.portachest.item.PortableChestItem;
 import net.zlt.portachest.render.entity.model.PortableChestModel;
 
@@ -38,7 +37,7 @@ public class PortableChestFeatureRenderer extends FeatureRenderer<AbstractClient
 
         if (entity.getEquippedStack(EquipmentSlot.CHEST).getItem() instanceof PortableChestItem portableChestItem) {
             portableChest = portableChestItem;
-        } else if (FabricLoader.getInstance().isModLoaded(TrinketsMain.MOD_ID)) {
+        } else if (Mods.TRINKETS.isLoaded) {
             Optional<TrinketComponent> trinketComponent = TrinketsApi.getTrinketComponent(entity);
 
             if (trinketComponent.isPresent()) {

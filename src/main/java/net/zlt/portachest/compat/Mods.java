@@ -3,6 +3,7 @@ package net.zlt.portachest.compat;
 import net.fabricmc.loader.api.FabricLoader;
 
 public enum Mods {
+    TRINKETS("trinkets"),
     VARIANT_VANILLA_BLOCKS("variantvanillablocks");
 
     public final String id;

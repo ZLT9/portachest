@@ -1,13 +1,10 @@
 package net.zlt.portachest;
 
-import dev.emi.trinkets.TrinketsMain;
 import dev.emi.trinkets.api.SlotReference;
 import dev.emi.trinkets.api.TrinketComponent;
 import dev.emi.trinkets.api.TrinketsApi;
 import net.fabricmc.api.ModInitializer;
-
 import net.fabricmc.fabric.api.networking.v1.ServerPlayNetworking;
-import net.fabricmc.loader.api.FabricLoader;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.Identifier;
@@ -41,7 +38,7 @@ public class Portachest implements ModInitializer {
                 return;
             }
 
-            if (FabricLoader.getInstance().isModLoaded(TrinketsMain.MOD_ID)) {
+            if (Mods.TRINKETS.isLoaded) {
                 Optional<TrinketComponent> trinketComponent = TrinketsApi.getTrinketComponent(player);
 
                 if (trinketComponent.isPresent()) {
