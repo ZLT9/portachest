@@ -58,10 +58,6 @@ public class PortableChestFeatureRenderer extends FeatureRenderer<AbstractClient
 
         matrices.push();
         matrices.translate(-0.25, 0, 0.125);
-//        if (entity.isInSneakingPose()) {
-//            matrices.multiply(RotationAxis.POSITIVE_X.rotationDegrees(25));
-//            matrices.translate(0, 0.125, -0.0625);
-//        }
         getContextModel().body.rotate(matrices);
         portableChestModel.render(matrices, vertexConsumers.getBuffer(RenderLayer.getEntitySolid(new Identifier("textures/entity/horse/donkey.png"))), light, OverlayTexture.DEFAULT_UV, 1.0f, 1.0f, 1.0f, 1.0f);
         matrices.pop();
