@@ -12,6 +12,7 @@ import net.minecraft.screen.NamedScreenHandlerFactory;
 import net.minecraft.screen.ScreenHandler;
 import net.minecraft.text.Text;
 import net.minecraft.util.Hand;
+import net.minecraft.util.Identifier;
 import net.minecraft.util.TypedActionResult;
 import net.minecraft.world.World;
 import net.zlt.portachest.inventory.PortableChestInventory;
@@ -20,8 +21,11 @@ import net.zlt.portachest.screen.PortableChestScreenHandler;
 public class PortableChestItem extends TrinketItem implements Equipment {
     public static final String ITEMS_KEY = "Items";
 
-    public PortableChestItem(Settings settings) {
+    public final Identifier entityTextureId;
+
+    public PortableChestItem(Identifier entityTextureId, Settings settings) {
         super(settings);
+        this.entityTextureId = entityTextureId;
 
         DispenserBlock.registerBehavior(this, ArmorItem.DISPENSER_BEHAVIOR);
     }
