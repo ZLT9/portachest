@@ -37,17 +37,17 @@ public class PortableChestItem extends TrinketItem implements Equipment {
 
     @Override
     public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
-        if (user.isSneaking()) {
-            if (world.isClient) {
-                return TypedActionResult.success(user.getStackInHand(hand));
-            }
-
-            open(user, user.getStackInHand(hand));
-
-            return TypedActionResult.consume(user.getStackInHand(hand));
+        if (!user.isSneaking()) {
+            return equipAndSwap(this, world, user, hand);
         }
 
-        return equipAndSwap(this, world, user, hand);
+        if (world.isClient) {
+            return TypedActionResult.success(user.getStackInHand(hand));
+        }
+
+        open(user, user.getStackInHand(hand));
+        return TypedActionResult.consume(user.getStackInHand(hand));
+
     }
 
     public void open(PlayerEntity player, ItemStack stack) {
