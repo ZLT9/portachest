@@ -158,16 +158,6 @@ public class PortableChestScreenHandler extends ScreenHandler {
         }
 
         @Override
-        public ItemStack insertStack(ItemStack stack) {
-            return super.insertStack(stack);
-        }
-
-        @Override
-        public ItemStack insertStack(ItemStack stack, int count) {
-            return super.insertStack(stack, count);
-        }
-
-        @Override
         public boolean canInsert(ItemStack stack) {
             return !(stack.getItem() instanceof PortableChestItem);
         }
