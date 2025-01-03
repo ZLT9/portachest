@@ -47,7 +47,6 @@ public class PortableChestItem extends TrinketItem implements Equipment {
 
         open(user, user.getStackInHand(hand));
         return TypedActionResult.consume(user.getStackInHand(hand));
-
     }
 
     public void open(PlayerEntity player, ItemStack stack) {
