@@ -4,19 +4,14 @@ import dev.emi.trinkets.api.TrinketItem;
 import net.minecraft.block.DispenserBlock;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.item.ArmorItem;
 import net.minecraft.item.Equipment;
 import net.minecraft.item.ItemStack;
-import net.minecraft.screen.NamedScreenHandlerFactory;
-import net.minecraft.screen.ScreenHandler;
-import net.minecraft.text.Text;
 import net.minecraft.util.Hand;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.TypedActionResult;
 import net.minecraft.world.World;
-import net.zlt.portachest.inventory.PortableChestInventory;
-import net.zlt.portachest.screen.PortableChestScreenHandler;
+import net.zlt.portachest.screen.PortableChestScreenHandlerFactory;
 
 public class PortableChestItem extends TrinketItem implements Equipment {
     public static final String ITEMS_KEY = "Items";
@@ -50,16 +45,6 @@ public class PortableChestItem extends TrinketItem implements Equipment {
     }
 
     public void open(PlayerEntity player, ItemStack stack) {
-        player.openHandledScreen(new NamedScreenHandlerFactory() {
-            @Override
-            public Text getDisplayName() {
-                return stack.getName();
-            }
-
-            @Override
-            public ScreenHandler createMenu(int syncId, PlayerInventory playerInventory, PlayerEntity player) {
-                return new PortableChestScreenHandler(syncId, playerInventory, new PortableChestInventory(stack));
-            }
-        });
+        player.openHandledScreen(new PortableChestScreenHandlerFactory(stack));
     }
 }
