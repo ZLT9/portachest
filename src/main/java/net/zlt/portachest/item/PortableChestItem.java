@@ -54,7 +54,7 @@ public class PortableChestItem extends TrinketItem implements Equipment {
         player.openHandledScreen(new NamedScreenHandlerFactory() {
             @Override
             public Text getDisplayName() {
-                return Text.translatable("item.portachest.portable_chest");
+                return stack.getName();
             }
 
             @Override
