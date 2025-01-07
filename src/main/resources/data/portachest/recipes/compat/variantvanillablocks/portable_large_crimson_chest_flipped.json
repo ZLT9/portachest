@@ -1,0 +1,26 @@
+{
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:all_mods_loaded",
+      "values": [
+        "variantvanillablocks"
+      ]
+    }
+  ],
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " C ",
+    "LCL"
+  ],
+  "key": {
+    "L": {
+      "item": "minecraft:lead"
+    },
+    "C": {
+      "item": "variantvanillablocks:crimson_chest"
+    }
+  },
+  "result": {
+    "item": "portachest:portable_large_crimson_chest"
+  }
+}
