@@ -5,10 +5,12 @@ import dev.emi.trinkets.api.TrinketComponent;
 import dev.emi.trinkets.api.TrinketsApi;
 import net.fabricmc.fabric.api.networking.v1.ServerPlayNetworking;
 import net.minecraft.entity.EquipmentSlot;
+import net.minecraft.entity.LivingEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.Pair;
 import net.zlt.portachest.item.PortableChestItem;
 import net.zlt.portachest.networking.AllNetworkingConstants;
+import org.jetbrains.annotations.Nullable;
 
 import java.util.Optional;
 
@@ -46,5 +48,21 @@ public final class Trinkets {
                 portableChest.open(player, offHandStack);
             }
         }));
+    }
+
+    @Nullable
+    public static PortableChestItem getPortableChest(LivingEntity entity) {
+        Optional<TrinketComponent> trinketComponent = TrinketsApi.getTrinketComponent(entity);
+        if (trinketComponent.isEmpty()) {
+            return null;
+        }
+
+        for (Pair<SlotReference, ItemStack> equipped : trinketComponent.get().getAllEquipped()) {
+            if (equipped.getRight().getItem() instanceof PortableChestItem portableChestItem) {
+                return portableChestItem;
+            }
+        }
+
+        return null;
     }
 }
