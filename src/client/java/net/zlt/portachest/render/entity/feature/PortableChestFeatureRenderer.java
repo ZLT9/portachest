@@ -17,6 +17,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.util.Pair;
 import net.zlt.portachest.compat.Mods;
 import net.zlt.portachest.item.PortableChestItem;
+import net.zlt.portachest.item.PortableLargeChestItem;
 import net.zlt.portachest.render.entity.model.PortableChestModel;
 
 import java.util.Optional;
@@ -58,7 +59,8 @@ public class PortableChestFeatureRenderer extends FeatureRenderer<AbstractClient
         matrices.push();
         matrices.translate(-0.25, 0, 0.125);
         getContextModel().body.rotate(matrices);
-        MODEL.render(matrices, vertexConsumers.getBuffer(MODEL.getLayer(portableChest.entityTextureId)), light, OverlayTexture.DEFAULT_UV, 1.0f, 1.0f, 1.0f, 1.0f);
+        PortableChestModel model = portableChest instanceof PortableLargeChestItem ? LARGE_MODEL : MODEL;
+        model.render(matrices, vertexConsumers.getBuffer(model.getLayer(portableChest.entityTextureId)), light, OverlayTexture.DEFAULT_UV, 1.0f, 1.0f, 1.0f, 1.0f);
         matrices.pop();
     }
 }
