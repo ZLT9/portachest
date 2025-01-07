@@ -3,6 +3,7 @@ package net.zlt.portachest.item;
 import dev.emi.trinkets.api.TrinketItem;
 import net.minecraft.block.DispenserBlock;
 import net.minecraft.client.gui.screen.Screen;
+import net.minecraft.client.item.TooltipContext;
 import net.minecraft.client.item.TooltipData;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.player.PlayerEntity;
@@ -12,14 +13,18 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NbtCompound;
 import net.minecraft.nbt.NbtElement;
 import net.minecraft.nbt.NbtList;
+import net.minecraft.text.Text;
 import net.minecraft.util.Hand;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.TypedActionResult;
 import net.minecraft.util.collection.DefaultedList;
 import net.minecraft.world.World;
 import net.zlt.portachest.client.item.PortableChestTooltipData;
+import net.zlt.portachest.client.option.AllKeyBindings;
 import net.zlt.portachest.screen.PortableChestScreenHandlerFactory;
+import org.jetbrains.annotations.Nullable;
 
+import java.util.List;
 import java.util.Optional;
 
 public class PortableChestItem extends TrinketItem implements Equipment {
@@ -73,6 +78,11 @@ public class PortableChestItem extends TrinketItem implements Equipment {
             stacks.add(ItemStack.EMPTY);
         }
         return Optional.of(new PortableChestTooltipData(stacks));
+    }
+
+    @Override
+    public void appendTooltip(ItemStack stack, @Nullable World world, List<Text> tooltip, TooltipContext context) {
+        tooltip.add(Text.translatable("item.portachest.portable_chest.hold_for_contents", AllKeyBindings.VIEW_PORTABLE_CHEST_CONTENTS.getBoundKeyLocalizedText()));
     }
 
     public void open(PlayerEntity player, ItemStack stack) {
