@@ -10,6 +10,7 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ArmorItem;
 import net.minecraft.item.Equipment;
 import net.minecraft.item.ItemStack;
+import net.minecraft.item.Items;
 import net.minecraft.nbt.NbtCompound;
 import net.minecraft.nbt.NbtElement;
 import net.minecraft.nbt.NbtList;
@@ -89,5 +90,9 @@ public class PortableChestItem extends TrinketItem implements Equipment {
 
     public void open(PlayerEntity player, ItemStack stack) {
         player.openHandledScreen(new PortableChestScreenHandlerFactory(stack));
+    }
+
+    public boolean canBeExtendedWith(ItemStack stack) {
+        return !stack.isEmpty() && stack.isOf(Items.CHEST);
     }
 }
