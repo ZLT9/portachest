@@ -11,6 +11,7 @@ import net.zlt.portachest.item.AllItemGroups;
 import net.zlt.portachest.item.AllItems;
 import net.zlt.portachest.item.PortableChestItem;
 import net.zlt.portachest.networking.AllNetworkingConstants;
+import net.zlt.portachest.registry.tag.AllItemTags;
 import net.zlt.portachest.screen.AllScreenHandlerTypes;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -24,6 +25,7 @@ public class Portachest implements ModInitializer {
         Mods.init();
         AllScreenHandlerTypes.init();
         AllItems.init();
+        AllItemTags.init();
         AllItemGroups.init();
 
         if (Mods.TRINKETS.isLoaded) {
