@@ -14,6 +14,7 @@ import net.minecraft.nbt.NbtCompound;
 import net.minecraft.nbt.NbtElement;
 import net.minecraft.nbt.NbtList;
 import net.minecraft.text.Text;
+import net.minecraft.util.Formatting;
 import net.minecraft.util.Hand;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.TypedActionResult;
@@ -82,7 +83,7 @@ public class PortableChestItem extends TrinketItem implements Equipment {
     @Override
     public void appendTooltip(ItemStack stack, @Nullable World world, List<Text> tooltip, TooltipContext context) {
         if (!Screen.hasShiftDown()) {
-            tooltip.add(Text.translatable("item.portachest.portable_chest.hold_for_contents", Text.translatable("key.keyboard.left.shift")));
+            tooltip.add(Text.translatable("item.portachest.portable_chest.hold_for_contents", Text.translatable("key.keyboard.left.shift").formatted(Formatting.GRAY)).formatted(Formatting.DARK_GRAY));
         }
     }
 
