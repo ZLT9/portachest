@@ -17,6 +17,9 @@ repositories {
 	maven {
 		url "https://maven.ladysnake.org/releases"
 	}
+	flatDir {
+		dirs "libs"
+	}
 }
 
 dependencies {
@@ -29,6 +32,8 @@ dependencies {
 	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
 
 	modImplementation "dev.emi:trinkets:${project.trinkets_version}"
+
+	modImplementation "net.xanthian:variantvanillablocks:${project.variantvanillablocks_version}"
 }
 
 processResources {
