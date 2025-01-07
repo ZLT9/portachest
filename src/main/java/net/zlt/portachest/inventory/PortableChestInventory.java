@@ -47,7 +47,7 @@ public class PortableChestInventory implements Inventory {
     @Override
     public ItemStack removeStack(int slot, int amount) {
         ItemStack result = Inventories.splitStack(stacks, slot, amount);
-        Inventories.writeNbt(portableChest.getNbt(), stacks);
+        Inventories.writeNbt(portableChest.getOrCreateNbt(), stacks);
         return result;
     }
 
@@ -58,7 +58,7 @@ public class PortableChestInventory implements Inventory {
             return ItemStack.EMPTY;
         }
         stacks.set(slot, ItemStack.EMPTY);
-        Inventories.writeNbt(portableChest.getNbt(), stacks);
+        Inventories.writeNbt(portableChest.getOrCreateNbt(), stacks);
         return itemStack;
     }
 
