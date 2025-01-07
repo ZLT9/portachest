@@ -9,12 +9,20 @@ import net.minecraft.client.util.math.MatrixStack;
 
 @Environment(EnvType.CLIENT)
 public class PortableChestModel extends Model {
-    public static TexturedModelData getTexturedModelData() {
+    private static TexturedModelData getTexturedModelData(float height) {
         ModelData modelData = new ModelData();
         ModelPartData modelPartData = modelData.getRoot();
-        ModelPartBuilder modelPartBuilder = ModelPartBuilder.create().uv(0, 0).cuboid(0.0f, 0.0f, 0.0f, 8.0f, 8.0f, 3.0f);
+        ModelPartBuilder modelPartBuilder = ModelPartBuilder.create().uv(0, 0).cuboid(0.0f, 0.0f, 0.0f, 8.0f, height, 3.0f);
         modelPartData.addChild("portable_chest", modelPartBuilder, ModelTransform.NONE);
         return TexturedModelData.of(modelData, 24, 24);
+    }
+
+    public static TexturedModelData getTexturedModelData() {
+        return getTexturedModelData(8.0f);
+    }
+
+    public static TexturedModelData getLargeTexturedModelData() {
+        return getTexturedModelData(12.0f);
     }
 
     protected final ModelPart modelPart;
