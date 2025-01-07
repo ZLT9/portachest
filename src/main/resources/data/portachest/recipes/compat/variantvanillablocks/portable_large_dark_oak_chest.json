@@ -22,5 +22,6 @@
   },
   "result": {
     "item": "portachest:portable_large_dark_oak_chest"
-  }
+  },
+  "show_notification": true
 }

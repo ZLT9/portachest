@@ -22,5 +22,6 @@
   },
   "result": {
     "item": "portachest:portable_large_jungle_chest"
-  }
+  },
+  "show_notification": true
 }

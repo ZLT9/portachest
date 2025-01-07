@@ -15,5 +15,6 @@
   },
   "result": {
     "item": "portachest:portable_large_chest"
-  }
+  },
+  "show_notification": true
 }

@@ -22,5 +22,6 @@
   },
   "result": {
     "item": "portachest:portable_large_warped_chest"
-  }
+  },
+  "show_notification": true
 }

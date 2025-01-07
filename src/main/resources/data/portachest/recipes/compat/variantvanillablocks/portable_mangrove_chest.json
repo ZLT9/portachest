@@ -21,5 +21,6 @@
   },
   "result": {
     "item": "portachest:portable_mangrove_chest"
-  }
+  },
+  "show_notification": true
 }

@@ -22,5 +22,6 @@
   },
   "result": {
     "item": "portachest:portable_large_birch_chest"
-  }
+  },
+  "show_notification": true
 }

@@ -21,5 +21,6 @@
   },
   "result": {
     "item": "portachest:portable_bamboo_chest"
-  }
+  },
+  "show_notification": true
 }
