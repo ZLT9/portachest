@@ -11,21 +11,21 @@ import net.minecraft.util.collection.DefaultedList;
 import net.zlt.portachest.item.PortableChestItem;
 
 public class PortableChestInventory implements Inventory {
-    protected final ItemStack stack;
+    protected final ItemStack portableChest;
     protected final DefaultedList<ItemStack> stacks = DefaultedList.ofSize(size(), ItemStack.EMPTY);
 
-    public PortableChestInventory(ItemStack stack) {
-        this.stack = stack;
+    public PortableChestInventory(ItemStack portableChest) {
+        this.portableChest = portableChest;
 
-        if (stack.hasNbt()) {
-            NbtCompound stackNbt = stack.getNbt();
+        if (portableChest.hasNbt()) {
+            NbtCompound stackNbt = portableChest.getNbt();
             if (stackNbt.contains(PortableChestItem.ITEMS_KEY, NbtElement.LIST_TYPE)) {
                 Inventories.readNbt(stackNbt, stacks);
             } else {
                 stackNbt.put(PortableChestItem.ITEMS_KEY, new NbtList());
             }
         } else {
-            stack.getOrCreateNbt().put(PortableChestItem.ITEMS_KEY, new NbtList());
+            portableChest.getOrCreateNbt().put(PortableChestItem.ITEMS_KEY, new NbtList());
         }
     }
 
@@ -47,7 +47,7 @@ public class PortableChestInventory implements Inventory {
     @Override
     public ItemStack removeStack(int slot, int amount) {
         ItemStack result = Inventories.splitStack(stacks, slot, amount);
-        Inventories.writeNbt(stack.getNbt(), stacks);
+        Inventories.writeNbt(portableChest.getNbt(), stacks);
         return result;
     }
 
@@ -58,7 +58,7 @@ public class PortableChestInventory implements Inventory {
             return ItemStack.EMPTY;
         }
         stacks.set(slot, ItemStack.EMPTY);
-        Inventories.writeNbt(stack.getNbt(), stacks);
+        Inventories.writeNbt(portableChest.getNbt(), stacks);
         return itemStack;
     }
 
@@ -68,7 +68,7 @@ public class PortableChestInventory implements Inventory {
         if (!stack.isEmpty() && stack.getCount() > getMaxCountPerStack()) {
             stack.setCount(getMaxCountPerStack());
         }
-        Inventories.writeNbt(this.stack.getOrCreateNbt(), stacks);
+        Inventories.writeNbt(portableChest.getOrCreateNbt(), stacks);
     }
 
     @Override
@@ -83,6 +83,6 @@ public class PortableChestInventory implements Inventory {
     @Override
     public void clear() {
         stacks.clear();
-        Inventories.writeNbt(stack.getOrCreateNbt(), stacks);
+        Inventories.writeNbt(portableChest.getOrCreateNbt(), stacks);
     }
 }
