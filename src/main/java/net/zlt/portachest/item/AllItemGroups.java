@@ -46,18 +46,18 @@ public final class AllItemGroups {
             addIfNotNull(itemGroup, AllItems.PORTABLE_LARGE_JUNGLE_CHEST);
             addIfNotNull(itemGroup, AllItems.PORTABLE_ACACIA_CHEST);
             addIfNotNull(itemGroup, AllItems.PORTABLE_LARGE_ACACIA_CHEST);
-            addIfNotNull(itemGroup, AllItems.PORTABLE_CHERRY_CHEST);
-            addIfNotNull(itemGroup, AllItems.PORTABLE_LARGE_CHERRY_CHEST);
             addIfNotNull(itemGroup, AllItems.PORTABLE_DARK_OAK_CHEST);
             addIfNotNull(itemGroup, AllItems.PORTABLE_LARGE_DARK_OAK_CHEST);
             addIfNotNull(itemGroup, AllItems.PORTABLE_MANGROVE_CHEST);
             addIfNotNull(itemGroup, AllItems.PORTABLE_LARGE_MANGROVE_CHEST);
+            addIfNotNull(itemGroup, AllItems.PORTABLE_CHERRY_CHEST);
+            addIfNotNull(itemGroup, AllItems.PORTABLE_LARGE_CHERRY_CHEST);
             addIfNotNull(itemGroup, AllItems.PORTABLE_BAMBOO_CHEST);
             addIfNotNull(itemGroup, AllItems.PORTABLE_LARGE_BAMBOO_CHEST);
-            addIfNotNull(itemGroup, AllItems.PORTABLE_WARPED_CHEST);
-            addIfNotNull(itemGroup, AllItems.PORTABLE_LARGE_WARPED_CHEST);
             addIfNotNull(itemGroup, AllItems.PORTABLE_CRIMSON_CHEST);
             addIfNotNull(itemGroup, AllItems.PORTABLE_LARGE_CRIMSON_CHEST);
+            addIfNotNull(itemGroup, AllItems.PORTABLE_WARPED_CHEST);
+            addIfNotNull(itemGroup, AllItems.PORTABLE_LARGE_WARPED_CHEST);
         });
     }
 }
