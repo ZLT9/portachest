@@ -1,4 +1,4 @@
-package net.zlt.portachest.gui.screen.ingame;
+package net.zlt.portachest.client.gui.screen.ingame;
 
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;

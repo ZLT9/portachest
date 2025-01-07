@@ -1,4 +1,4 @@
-package net.zlt.portachest.option;
+package net.zlt.portachest.client.option;
 
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;

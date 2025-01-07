@@ -1,4 +1,4 @@
-package net.zlt.portachest;
+package net.zlt.portachest.client;
 
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.api.EnvType;
@@ -8,11 +8,12 @@ import net.fabricmc.fabric.api.resource.ResourcePackActivationType;
 import net.fabricmc.loader.api.FabricLoader;
 import net.minecraft.client.gui.screen.ingame.HandledScreens;
 import net.minecraft.text.Text;
+import net.zlt.portachest.Portachest;
+import net.zlt.portachest.client.gui.screen.ingame.PortableChestScreen;
+import net.zlt.portachest.client.gui.screen.ingame.PortableLargeChestScreen;
+import net.zlt.portachest.client.option.AllKeyBindings;
 import net.zlt.portachest.compat.Mods;
-import net.zlt.portachest.gui.screen.ingame.PortableChestScreen;
-import net.zlt.portachest.gui.screen.ingame.PortableLargeChestScreen;
 import net.zlt.portachest.networking.AllNetworkingConstants;
-import net.zlt.portachest.option.AllKeyBindings;
 import net.zlt.portachest.screen.AllScreenHandlerTypes;
 
 @Environment(EnvType.CLIENT)

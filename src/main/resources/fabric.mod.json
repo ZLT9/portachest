@@ -16,15 +16,11 @@
       "net.zlt.portachest.Portachest"
     ],
     "client": [
-      "net.zlt.portachest.PortachestClient"
+      "net.zlt.portachest.client.PortachestClient"
     ]
   },
   "mixins": [
-    "portachest.mixins.json",
-    {
-      "config": "portachest.client.mixins.json",
-      "environment": "client"
-    }
+    "portachest.mixins.json"
   ],
   "depends": {
     "fabricloader": ">=0.16.9",

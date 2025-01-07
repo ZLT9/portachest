@@ -1,4 +1,4 @@
-package net.zlt.portachest.render.entity.feature;
+package net.zlt.portachest.client.render.entity.feature;
 
 import dev.emi.trinkets.api.SlotReference;
 import dev.emi.trinkets.api.TrinketComponent;
@@ -15,10 +15,10 @@ import net.minecraft.client.util.math.MatrixStack;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.Pair;
+import net.zlt.portachest.client.render.entity.model.PortableChestModel;
 import net.zlt.portachest.compat.Mods;
 import net.zlt.portachest.item.PortableChestItem;
 import net.zlt.portachest.item.PortableLargeChestItem;
-import net.zlt.portachest.render.entity.model.PortableChestModel;
 
 import java.util.Optional;
 

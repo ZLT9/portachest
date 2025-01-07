@@ -1,4 +1,4 @@
-package net.zlt.portachest.render.entity.model;
+package net.zlt.portachest.client.render.entity.model;
 
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
