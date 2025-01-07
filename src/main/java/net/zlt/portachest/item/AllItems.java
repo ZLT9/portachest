@@ -14,6 +14,7 @@ public final class AllItems {
     }
 
     public static final Item PORTABLE_CHEST = register("portable_chest", new PortableChestItem(Portachest.asId("textures/entity/portable_chest.png"), new Item.Settings().maxCount(1)));
+    public static final Item PORTABLE_LARGE_CHEST = register("portable_large_chest", new PortableLargeChestItem(Portachest.asId("textures/entity/portable_large_chest.png"), new Item.Settings().maxCount(1)));
 
     public static final Item PORTABLE_SPRUCE_CHEST = registerIf(Mods.VARIANT_VANILLA_BLOCKS.isLoaded, "portable_spruce_chest", () -> newPortableChest(Portachest.asId("textures/entity/portable_spruce_chest.png")));
     public static final Item PORTABLE_BIRCH_CHEST = registerIf(Mods.VARIANT_VANILLA_BLOCKS.isLoaded, "portable_birch_chest", () -> newPortableChest(Portachest.asId("textures/entity/portable_birch_chest.png")));

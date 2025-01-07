@@ -36,6 +36,7 @@ public final class AllItemGroups {
     public static void init() {
         ItemGroupEvents.modifyEntriesEvent(BASE_KEY).register(itemGroup -> {
             itemGroup.add(AllItems.PORTABLE_CHEST);
+            itemGroup.add(AllItems.PORTABLE_LARGE_CHEST);
 
             addIfNotNull(itemGroup, AllItems.PORTABLE_SPRUCE_CHEST);
             addIfNotNull(itemGroup, AllItems.PORTABLE_BIRCH_CHEST);
