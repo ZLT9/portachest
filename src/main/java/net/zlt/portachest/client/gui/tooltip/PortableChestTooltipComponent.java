@@ -55,7 +55,7 @@ public class PortableChestTooltipComponent implements TooltipComponent {
     }
 
     private void draw(DrawContext context, int x, int y, Sprite sprite) {
-        context.drawTexture(TEXTURE, x, y, 0, sprite.u, sprite.v, sprite.width, sprite.height, 64, 64);
+        context.drawTexture(TEXTURE, x, y, 0, sprite.u, sprite.v, sprite.width, sprite.height, 32, 32);
     }
 
     private void drawSlot(int x, int y, int index, DrawContext context, TextRenderer textRenderer) {
@@ -91,9 +91,9 @@ public class PortableChestTooltipComponent implements TooltipComponent {
     @Environment(EnvType.CLIENT)
     private enum Sprite {
         SLOT(0, 0, 18, 18),
-        BORDER_VERTICAL(0, 18, 1, 18),
+        BORDER_VERTICAL(18, 0, 1, 18),
         BORDER_HORIZONTAL(0, 18, 18, 1),
-        BORDER_CORNER(0, 18, 1, 1);
+        BORDER_CORNER(18, 18, 1, 1);
 
         public final int u;
         public final int v;
