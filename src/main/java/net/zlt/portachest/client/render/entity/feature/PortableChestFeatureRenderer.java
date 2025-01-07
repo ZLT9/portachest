@@ -1,8 +1,5 @@
 package net.zlt.portachest.client.render.entity.feature;
 
-import dev.emi.trinkets.api.SlotReference;
-import dev.emi.trinkets.api.TrinketComponent;
-import dev.emi.trinkets.api.TrinketsApi;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.minecraft.client.network.AbstractClientPlayerEntity;
@@ -13,14 +10,11 @@ import net.minecraft.client.render.entity.feature.FeatureRendererContext;
 import net.minecraft.client.render.entity.model.PlayerEntityModel;
 import net.minecraft.client.util.math.MatrixStack;
 import net.minecraft.entity.EquipmentSlot;
-import net.minecraft.item.ItemStack;
-import net.minecraft.util.Pair;
 import net.zlt.portachest.client.render.entity.model.PortableChestModel;
 import net.zlt.portachest.compat.Mods;
+import net.zlt.portachest.compat.trinkets.Trinkets;
 import net.zlt.portachest.item.PortableChestItem;
 import net.zlt.portachest.item.PortableLargeChestItem;
-
-import java.util.Optional;
 
 @Environment(EnvType.CLIENT)
 public class PortableChestFeatureRenderer extends FeatureRenderer<AbstractClientPlayerEntity, PlayerEntityModel<AbstractClientPlayerEntity>> {
@@ -38,18 +32,7 @@ public class PortableChestFeatureRenderer extends FeatureRenderer<AbstractClient
         if (entity.getEquippedStack(EquipmentSlot.CHEST).getItem() instanceof PortableChestItem portableChestItem) {
             portableChest = portableChestItem;
         } else if (Mods.TRINKETS.isLoaded) {
-            Optional<TrinketComponent> trinketComponent = TrinketsApi.getTrinketComponent(entity);
-
-            if (trinketComponent.isPresent()) {
-                for (Pair<SlotReference, ItemStack> equipped : trinketComponent.get().getAllEquipped()) {
-                    ItemStack stack = equipped.getRight();
-
-                    if (stack.getItem() instanceof PortableChestItem portableChestItem) {
-                        portableChest = portableChestItem;
-                        break;
-                    }
-                }
-            }
+            portableChest = Trinkets.getPortableChest(entity);
         }
 
         if (portableChest == null) {
