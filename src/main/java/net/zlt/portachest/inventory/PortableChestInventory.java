@@ -1,22 +1,32 @@
 package net.zlt.portachest.inventory;
 
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.inventory.Inventories;
 import net.minecraft.inventory.Inventory;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NbtCompound;
 import net.minecraft.nbt.NbtElement;
 import net.minecraft.nbt.NbtList;
+import net.minecraft.util.collection.DefaultedList;
 import net.zlt.portachest.item.PortableChestItem;
 
 public class PortableChestInventory implements Inventory {
-    protected static NbtCompound asNbt(ItemStack stack) {
-        return stack.isEmpty() ? new NbtCompound() : stack.writeNbt(new NbtCompound());
-    }
-
     protected final ItemStack stack;
+    protected final DefaultedList<ItemStack> stacks = DefaultedList.ofSize(size(), ItemStack.EMPTY);
 
     public PortableChestInventory(ItemStack stack) {
         this.stack = stack;
+
+        if (stack.hasNbt()) {
+            NbtCompound stackNbt = stack.getNbt();
+            if (stackNbt.contains(PortableChestItem.ITEMS_KEY, NbtElement.LIST_TYPE)) {
+                Inventories.readNbt(stackNbt, stacks);
+            } else {
+                stackNbt.put(PortableChestItem.ITEMS_KEY, new NbtList());
+            }
+        } else {
+            stack.getOrCreateNbt().put(PortableChestItem.ITEMS_KEY, new NbtList());
+        }
     }
 
     @Override
@@ -26,123 +36,39 @@ public class PortableChestInventory implements Inventory {
 
     @Override
     public boolean isEmpty() {
-        NbtCompound nbt = stack.getNbt();
-
-        if (nbt == null || nbt.isEmpty()) {
-            return true;
-        }
-
-        return nbt.getList(PortableChestItem.ITEMS_KEY, NbtElement.COMPOUND_TYPE).isEmpty();
+        return stacks.stream().allMatch(ItemStack::isEmpty);
     }
 
     @Override
     public ItemStack getStack(int slot) {
-        if (slot < 0 || slot >= size()) {
-            return ItemStack.EMPTY;
-        }
-
-        NbtCompound nbt = stack.getNbt();
-
-        if (nbt == null || nbt.isEmpty()) {
-            return ItemStack.EMPTY;
-        }
-
-        NbtList itemList = nbt.getList(PortableChestItem.ITEMS_KEY, NbtElement.COMPOUND_TYPE);
-
-        if (slot >= itemList.size()) {
-            return ItemStack.EMPTY;
-        }
-
-        NbtCompound compound = (NbtCompound) itemList.get(slot);
-
-        if (compound.isEmpty()) {
-            return ItemStack.EMPTY;
-        }
-
-        return ItemStack.fromNbt(compound);
+        return stacks.get(slot);
     }
 
     @Override
     public ItemStack removeStack(int slot, int amount) {
-        if (slot < 0 || slot >= size()) {
-            return ItemStack.EMPTY;
-        }
-
-        if (amount <= 0) {
-            return ItemStack.EMPTY;
-        }
-
-        ItemStack stack = getStack(slot);
-
-        if (stack.isEmpty()) {
-            return ItemStack.EMPTY;
-        }
-
-        ItemStack removed = stack.split(amount);
-
-        this.stack.getNbt().getList(PortableChestItem.ITEMS_KEY, NbtElement.COMPOUND_TYPE).set(slot, asNbt(stack));
-
-        return removed;
+        ItemStack result = Inventories.splitStack(stacks, slot, amount);
+        Inventories.writeNbt(stack.getNbt(), stacks);
+        return result;
     }
 
     @Override
     public ItemStack removeStack(int slot) {
-        if (slot < 0 || slot >= size()) {
+        ItemStack itemStack = stacks.get(slot);
+        if (itemStack.isEmpty()) {
             return ItemStack.EMPTY;
         }
-
-        NbtCompound nbt = stack.getNbt();
-
-        if (nbt == null || nbt.isEmpty()) {
-            return ItemStack.EMPTY;
-        }
-
-        NbtList itemList = nbt.getList(PortableChestItem.ITEMS_KEY, NbtElement.COMPOUND_TYPE);
-
-        if (slot >= itemList.size()) {
-            return ItemStack.EMPTY;
-        }
-
-        NbtCompound compound = (NbtCompound) itemList.get(slot);
-
-        if (compound.isEmpty()) {
-            return ItemStack.EMPTY;
-        }
-
-        itemList.set(slot, new NbtCompound());
-
-        return ItemStack.fromNbt(compound);
+        stacks.set(slot, ItemStack.EMPTY);
+        Inventories.writeNbt(stack.getNbt(), stacks);
+        return itemStack;
     }
 
     @Override
     public void setStack(int slot, ItemStack stack) {
-        if (slot < 0 || slot >= size()) {
-            return;
-        }
-
-        NbtCompound nbt = this.stack.getOrCreateNbt();
-
-        if (nbt.isEmpty() || !nbt.contains(PortableChestItem.ITEMS_KEY, NbtElement.LIST_TYPE)) {
-            nbt.put(PortableChestItem.ITEMS_KEY, new NbtList());
-        }
-
-        NbtList itemList = nbt.getList(PortableChestItem.ITEMS_KEY, NbtElement.COMPOUND_TYPE);
-
-        if (stack.getCount() > getMaxCountPerStack()) {
+        stacks.set(slot, stack);
+        if (!stack.isEmpty() && stack.getCount() > getMaxCountPerStack()) {
             stack.setCount(getMaxCountPerStack());
         }
-
-        if (slot >= itemList.size()) {
-            for (int i = itemList.size(); i < slot; ++i) {
-                itemList.add(new NbtCompound());
-            }
-
-            itemList.add(stack.isEmpty() ? new NbtCompound() : stack.writeNbt(new NbtCompound()));
-
-            return;
-        }
-
-        itemList.set(slot, asNbt(stack));
+        Inventories.writeNbt(this.stack.getOrCreateNbt(), stacks);
     }
 
     @Override
@@ -156,12 +82,7 @@ public class PortableChestInventory implements Inventory {
 
     @Override
     public void clear() {
-        NbtCompound nbt = stack.getNbt();
-
-        if (nbt == null || nbt.isEmpty() || !nbt.contains(PortableChestItem.ITEMS_KEY, NbtElement.LIST_TYPE)) {
-            return;
-        }
-
-        nbt.getList(PortableChestItem.ITEMS_KEY, NbtElement.COMPOUND_TYPE).clear();
+        stacks.clear();
+        Inventories.writeNbt(stack.getOrCreateNbt(), stacks);
     }
 }
