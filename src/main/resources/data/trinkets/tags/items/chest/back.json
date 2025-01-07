@@ -11,17 +11,17 @@
     "portachest:portable_large_jungle_chest",
     "portachest:portable_acacia_chest",
     "portachest:portable_large_acacia_chest",
-    "portachest:portable_cherry_chest",
-    "portachest:portable_large_cherry_chest",
     "portachest:portable_dark_oak_chest",
     "portachest:portable_large_dark_oak_chest",
     "portachest:portable_mangrove_chest",
     "portachest:portable_large_mangrove_chest",
+    "portachest:portable_cherry_chest",
+    "portachest:portable_large_cherry_chest",
     "portachest:portable_bamboo_chest",
     "portachest:portable_large_bamboo_chest",
-    "portachest:portable_warped_chest",
-    "portachest:portable_large_warped_chest",
     "portachest:portable_crimson_chest",
-    "portachest:portable_large_crimson_chest"
+    "portachest:portable_large_crimson_chest",
+    "portachest:portable_warped_chest",
+    "portachest:portable_large_warped_chest"
   ]
 }
