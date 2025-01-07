@@ -1,5 +1,7 @@
 package net.zlt.portachest.client.gui.tooltip;
 
+import net.fabricmc.api.EnvType;
+import net.fabricmc.api.Environment;
 import net.minecraft.client.font.TextRenderer;
 import net.minecraft.client.gui.tooltip.TooltipComponent;
 import net.minecraft.item.ItemStack;
@@ -8,6 +10,7 @@ import net.minecraft.util.collection.DefaultedList;
 import net.zlt.portachest.Portachest;
 import net.zlt.portachest.client.item.PortableChestTooltipData;
 
+@Environment(EnvType.CLIENT)
 public class PortableChestTooltipComponent implements TooltipComponent {
     public static final Identifier TEXTURE = Portachest.asId("textures/gui/container/portable_chest.png");
 
