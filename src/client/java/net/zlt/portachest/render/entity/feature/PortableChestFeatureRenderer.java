@@ -24,6 +24,7 @@ import java.util.Optional;
 @Environment(EnvType.CLIENT)
 public class PortableChestFeatureRenderer extends FeatureRenderer<AbstractClientPlayerEntity, PlayerEntityModel<AbstractClientPlayerEntity>> {
     private static final PortableChestModel MODEL = new PortableChestModel(PortableChestModel.getTexturedModelData().createModel());
+    private static final PortableChestModel LARGE_MODEL = new PortableChestModel(PortableChestModel.getLargeTexturedModelData().createModel());
 
     public PortableChestFeatureRenderer(FeatureRendererContext<AbstractClientPlayerEntity, PlayerEntityModel<AbstractClientPlayerEntity>> context) {
         super(context);
