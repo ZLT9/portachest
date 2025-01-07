@@ -3,7 +3,6 @@ package net.zlt.portachest.item;
 import net.minecraft.item.Item;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
-import net.minecraft.util.Identifier;
 import net.zlt.portachest.Portachest;
 import net.zlt.portachest.compat.Mods;
 
