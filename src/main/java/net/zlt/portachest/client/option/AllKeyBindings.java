@@ -23,13 +23,6 @@ public final class AllKeyBindings {
         "category.portachest.portachest"
     ));
 
-    public static final KeyBinding VIEW_PORTABLE_CHEST_CONTENTS = KeyBindingHelper.registerKeyBinding(new KeyBinding(
-        "key.portachest.view_portable_chest_contents",
-        InputUtil.Type.KEYSYM,
-        GLFW.GLFW_KEY_LEFT_SHIFT,
-        "category.portachest.portachest"
-    ));
-
     public static void init() {
         ClientTickEvents.END_CLIENT_TICK.register(client -> {
             while (OPEN_PORTABLE_CHEST.wasPressed()) {

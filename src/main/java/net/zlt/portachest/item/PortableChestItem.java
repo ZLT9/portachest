@@ -2,6 +2,7 @@ package net.zlt.portachest.item;
 
 import dev.emi.trinkets.api.TrinketItem;
 import net.minecraft.block.DispenserBlock;
+import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.client.item.TooltipContext;
 import net.minecraft.client.item.TooltipData;
 import net.minecraft.entity.EquipmentSlot;
@@ -19,7 +20,6 @@ import net.minecraft.util.TypedActionResult;
 import net.minecraft.util.collection.DefaultedList;
 import net.minecraft.world.World;
 import net.zlt.portachest.client.item.PortableChestTooltipData;
-import net.zlt.portachest.client.option.AllKeyBindings;
 import net.zlt.portachest.screen.PortableChestScreenHandlerFactory;
 import org.jetbrains.annotations.Nullable;
 
@@ -59,7 +59,7 @@ public class PortableChestItem extends TrinketItem implements Equipment {
 
     @Override
     public Optional<TooltipData> getTooltipData(ItemStack stack) {
-        if (!AllKeyBindings.VIEW_PORTABLE_CHEST_CONTENTS.isPressed()) {
+        if (!Screen.hasShiftDown()) {
             return Optional.empty();
         }
 
@@ -81,8 +81,8 @@ public class PortableChestItem extends TrinketItem implements Equipment {
 
     @Override
     public void appendTooltip(ItemStack stack, @Nullable World world, List<Text> tooltip, TooltipContext context) {
-        if (!AllKeyBindings.VIEW_PORTABLE_CHEST_CONTENTS.isPressed()) {
-            tooltip.add(Text.translatable("item.portachest.portable_chest.hold_for_contents", AllKeyBindings.VIEW_PORTABLE_CHEST_CONTENTS.getBoundKeyLocalizedText()));
+        if (!Screen.hasShiftDown()) {
+            tooltip.add(Text.translatable("item.portachest.portable_chest.hold_for_contents", Text.translatable("key.keyboard.left.shift")));
         }
     }
 

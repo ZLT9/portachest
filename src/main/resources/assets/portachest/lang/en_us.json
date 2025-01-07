@@ -23,7 +23,6 @@
   "item.portachest.portable_large_warped_chest": "Portable Large Warped Chest",
   "item.portachest.portable_chest.hold_for_contents": "Hold [%s] to view Contents",
   "key.portachest.open_portable_chest": "Open Portable Chest",
-  "key.portachest.view_portable_chest_contents": "View Portable Chest Contents",
   "category.portachest.portachest": "Port-a-Chest",
   "itemGroup.portachest": "Port-a-Chest",
   "portachest.resource_pack.compat_variantvanillablocks": "Port-a-Chest x Variant Vanilla Blocks"
