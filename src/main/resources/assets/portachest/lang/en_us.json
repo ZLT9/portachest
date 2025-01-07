@@ -21,7 +21,7 @@
   "item.portachest.portable_large_crimson_chest": "Portable Large Crimson Chest",
   "item.portachest.portable_warped_chest": "Portable Warped Chest",
   "item.portachest.portable_large_warped_chest": "Portable Large Warped Chest",
-  "item.portachest.portable_chest.hold_for_contents": "Hold [%s] to view Contents",
+  "item.portachest.portable_chest.hold_for_contents": "Hold [%s] for Contents",
   "key.portachest.open_portable_chest": "Open Portable Chest",
   "category.portachest.portachest": "Port-a-Chest",
   "itemGroup.portachest": "Port-a-Chest",
