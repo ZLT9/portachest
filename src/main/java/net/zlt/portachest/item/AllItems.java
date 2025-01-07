@@ -4,8 +4,9 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
-import net.xanthian.variantvanillablocks.block.Chests;
 import net.zlt.portachest.Portachest;
+import net.zlt.portachest.compat.Mods;
+import net.zlt.portachest.compat.variantvanillablocks.VariantVanillaBlocks;
 
 public final class AllItems {
     private AllItems() {
@@ -17,7 +18,7 @@ public final class AllItems {
     public static final Item PORTABLE_SPRUCE_CHEST = register("portable_spruce_chest", new PortableChestItem(Portachest.asId("textures/entity/portable_spruce_chest.png"), new Item.Settings().maxCount(1)) {
         @Override
         public boolean canBeExtendedWith(ItemStack stack) {
-            return !stack.isEmpty() && stack.isOf(Chests.SPRUCE_CHEST.asItem());
+            return Mods.VARIANT_VANILLA_BLOCKS.isLoaded && !stack.isEmpty() && stack.isOf(VariantVanillaBlocks.getSpruceChest().asItem());
         }
 
         @Override
@@ -29,7 +30,7 @@ public final class AllItems {
     public static final Item PORTABLE_BIRCH_CHEST = register("portable_birch_chest", new PortableChestItem(Portachest.asId("textures/entity/portable_birch_chest.png"), new Item.Settings().maxCount(1)) {
         @Override
         public boolean canBeExtendedWith(ItemStack stack) {
-            return !stack.isEmpty() && stack.isOf(Chests.BIRCH_CHEST.asItem());
+            return Mods.VARIANT_VANILLA_BLOCKS.isLoaded && !stack.isEmpty() && stack.isOf(VariantVanillaBlocks.getBirchChest().asItem());
         }
 
         @Override
@@ -41,7 +42,7 @@ public final class AllItems {
     public static final Item PORTABLE_JUNGLE_CHEST = register("portable_jungle_chest", new PortableChestItem(Portachest.asId("textures/entity/portable_jungle_chest.png"), new Item.Settings().maxCount(1)) {
         @Override
         public boolean canBeExtendedWith(ItemStack stack) {
-            return !stack.isEmpty() && stack.isOf(Chests.JUNGLE_CHEST.asItem());
+            return Mods.VARIANT_VANILLA_BLOCKS.isLoaded && !stack.isEmpty() && stack.isOf(VariantVanillaBlocks.getJungleChest().asItem());
         }
 
         @Override
@@ -53,7 +54,7 @@ public final class AllItems {
     public static final Item PORTABLE_ACACIA_CHEST = register("portable_acacia_chest", new PortableChestItem(Portachest.asId("textures/entity/portable_acacia_chest.png"), new Item.Settings().maxCount(1)) {
         @Override
         public boolean canBeExtendedWith(ItemStack stack) {
-            return !stack.isEmpty() && stack.isOf(Chests.ACACIA_CHEST.asItem());
+            return Mods.VARIANT_VANILLA_BLOCKS.isLoaded && !stack.isEmpty() && stack.isOf(VariantVanillaBlocks.getAcaciaChest().asItem());
         }
 
         @Override
@@ -65,7 +66,7 @@ public final class AllItems {
     public static final Item PORTABLE_DARK_OAK_CHEST = register("portable_dark_oak_chest", new PortableChestItem(Portachest.asId("textures/entity/portable_dark_oak_chest.png"), new Item.Settings().maxCount(1)) {
         @Override
         public boolean canBeExtendedWith(ItemStack stack) {
-            return !stack.isEmpty() && stack.isOf(Chests.DARK_OAK_CHEST.asItem());
+            return Mods.VARIANT_VANILLA_BLOCKS.isLoaded && !stack.isEmpty() && stack.isOf(VariantVanillaBlocks.getDarkOakChest().asItem());
         }
 
         @Override
@@ -77,7 +78,7 @@ public final class AllItems {
     public static final Item PORTABLE_MANGROVE_CHEST = register("portable_mangrove_chest", new PortableChestItem(Portachest.asId("textures/entity/portable_mangrove_chest.png"), new Item.Settings().maxCount(1)) {
         @Override
         public boolean canBeExtendedWith(ItemStack stack) {
-            return !stack.isEmpty() && stack.isOf(Chests.MANGROVE_CHEST.asItem());
+            return Mods.VARIANT_VANILLA_BLOCKS.isLoaded && !stack.isEmpty() && stack.isOf(VariantVanillaBlocks.getMangroveChest().asItem());
         }
 
         @Override
@@ -89,7 +90,7 @@ public final class AllItems {
     public static final Item PORTABLE_CHERRY_CHEST = register("portable_cherry_chest", new PortableChestItem(Portachest.asId("textures/entity/portable_cherry_chest.png"), new Item.Settings().maxCount(1)) {
         @Override
         public boolean canBeExtendedWith(ItemStack stack) {
-            return !stack.isEmpty() && stack.isOf(Chests.CHERRY_CHEST.asItem());
+            return Mods.VARIANT_VANILLA_BLOCKS.isLoaded && !stack.isEmpty() && stack.isOf(VariantVanillaBlocks.getCherryChest().asItem());
         }
 
         @Override
@@ -101,7 +102,7 @@ public final class AllItems {
     public static final Item PORTABLE_BAMBOO_CHEST = register("portable_bamboo_chest", new PortableChestItem(Portachest.asId("textures/entity/portable_bamboo_chest.png"), new Item.Settings().maxCount(1)) {
         @Override
         public boolean canBeExtendedWith(ItemStack stack) {
-            return !stack.isEmpty() && stack.isOf(Chests.BAMBOO_CHEST.asItem());
+            return Mods.VARIANT_VANILLA_BLOCKS.isLoaded && !stack.isEmpty() && stack.isOf(VariantVanillaBlocks.getBambooChest().asItem());
         }
 
         @Override
@@ -113,7 +114,7 @@ public final class AllItems {
     public static final Item PORTABLE_CRIMSON_CHEST = register("portable_crimson_chest", new PortableChestItem(Portachest.asId("textures/entity/portable_crimson_chest.png"), new Item.Settings().maxCount(1)) {
         @Override
         public boolean canBeExtendedWith(ItemStack stack) {
-            return !stack.isEmpty() && stack.isOf(Chests.CRIMSON_CHEST.asItem());
+            return Mods.VARIANT_VANILLA_BLOCKS.isLoaded && !stack.isEmpty() && stack.isOf(VariantVanillaBlocks.getCrimsonChest().asItem());
         }
 
         @Override
@@ -125,7 +126,7 @@ public final class AllItems {
     public static final Item PORTABLE_WARPED_CHEST = register("portable_warped_chest", new PortableChestItem(Portachest.asId("textures/entity/portable_warped_chest.png"), new Item.Settings().maxCount(1)) {
         @Override
         public boolean canBeExtendedWith(ItemStack stack) {
-            return !stack.isEmpty() && stack.isOf(Chests.WARPED_CHEST.asItem());
+            return Mods.VARIANT_VANILLA_BLOCKS.isLoaded && !stack.isEmpty() && stack.isOf(VariantVanillaBlocks.getWarpedChest().asItem());
         }
 
         @Override
