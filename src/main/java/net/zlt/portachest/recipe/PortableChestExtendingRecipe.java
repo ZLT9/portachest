@@ -38,8 +38,8 @@ public class PortableChestExtendingRecipe extends SpecialCraftingRecipe {
 
         for (int i = 0; i < inventory.size(); ++i) {
             ItemStack stack = inventory.getStack(i);
-            if (!stack.isEmpty() && !(stack.getItem() instanceof PortableChestItem) && portableChest.canBeExtendedWith(stack)) {
-                if (hasExtension) {
+            if (!stack.isEmpty() && !(stack.getItem() instanceof PortableChestItem)) {
+                if (!portableChest.canBeExtendedWith(stack) || hasExtension) {
                     return false;
                 }
 
