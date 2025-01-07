@@ -11,7 +11,7 @@ public class PortableLargeChestScreenHandler extends AbstractPortableChestScreen
     }
 
     public PortableLargeChestScreenHandler(int syncId, PlayerInventory playerInventory, Inventory inventory) {
-        super(AllScreenHandlerTypes.PORTABLE_CHEST, syncId, inventory);
+        super(AllScreenHandlerTypes.PORTABLE_LARGE_CHEST, syncId, inventory);
 
         checkSize(inventory, 54);
         inventory.onOpen(playerInventory.player);
