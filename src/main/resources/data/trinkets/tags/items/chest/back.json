@@ -2,6 +2,7 @@
   "replace": false,
   "values": [
     "portachest:portable_chest",
+    "portachest:portable_large_chest",
     "portachest:portable_spruce_chest",
     "portachest:portable_birch_chest",
     "portachest:portable_jungle_chest",
