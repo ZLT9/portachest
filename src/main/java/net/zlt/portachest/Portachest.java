@@ -14,6 +14,7 @@ import net.zlt.portachest.item.AllItemGroups;
 import net.zlt.portachest.item.AllItems;
 import net.zlt.portachest.item.PortableChestItem;
 import net.zlt.portachest.networking.AllNetworkingConstants;
+import net.zlt.portachest.recipe.AllRecipeSerializers;
 import net.zlt.portachest.screen.AllScreenHandlerTypes;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -30,6 +31,7 @@ public class Portachest implements ModInitializer {
         AllScreenHandlerTypes.init();
         AllItems.init();
         AllItemGroups.init();
+        AllRecipeSerializers.init();
 
         ServerPlayNetworking.registerGlobalReceiver(AllNetworkingConstants.OPEN_PORTABLE_CHEST_PACKET_ID, (server, player, handler, buf, responseSender) -> server.execute(() -> {
             ItemStack chestStack = player.getEquippedStack(EquipmentSlot.CHEST);
