@@ -1,6 +1,5 @@
 package net.zlt.portachest.item;
 
-import dev.emi.trinkets.api.TrinketItem;
 import net.minecraft.block.DispenserBlock;
 import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.client.item.TooltipContext;
@@ -9,6 +8,7 @@ import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ArmorItem;
 import net.minecraft.item.Equipment;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
 import net.minecraft.nbt.NbtCompound;
@@ -28,7 +28,7 @@ import org.jetbrains.annotations.Nullable;
 import java.util.List;
 import java.util.Optional;
 
-public class PortableChestItem extends TrinketItem implements Equipment {
+public class PortableChestItem extends Item implements Equipment {
     public static final String ITEMS_KEY = "Items";
 
     public final Identifier entityTextureId;
