@@ -21,6 +21,7 @@
   "item.portachest.portable_large_crimson_chest": "Cofre carmesí grande portátil",
   "item.portachest.portable_warped_chest": "Cofre distorsionado portátil",
   "item.portachest.portable_large_warped_chest": "Cofre distorsionado grande portátil",
+  "item.portachest.portable_chest.hold_for_contents": "Mantén [%s] para ver contenido",
   "key.portachest.open_portable_chest": "Abrir cofre portátil",
   "key.portachest.view_portable_chest_contents": "Ver contenido de cofre portátil"
 }
