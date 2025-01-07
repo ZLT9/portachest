@@ -1,0 +1,26 @@
+{
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:all_mods_loaded",
+      "values": [
+        "variantvanillablocks"
+      ]
+    }
+  ],
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "LCL",
+    " C "
+  ],
+  "key": {
+    "L": {
+      "item": "minecraft:lead"
+    },
+    "C": {
+      "item": "variantvanillablocks:mangrove_chest"
+    }
+  },
+  "result": {
+    "item": "portachest:portable_large_mangrove_chest"
+  }
+}
