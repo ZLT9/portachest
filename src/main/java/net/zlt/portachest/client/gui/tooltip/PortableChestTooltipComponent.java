@@ -22,7 +22,7 @@ public class PortableChestTooltipComponent implements TooltipComponent {
 
     @Override
     public int getHeight() {
-        return getRows() * 20 + 6;
+        return getRows() * 18 + 6;
     }
 
     @Override
