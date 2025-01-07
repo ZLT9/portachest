@@ -2,7 +2,6 @@ package net.zlt.portachest.item;
 
 import dev.emi.trinkets.api.TrinketItem;
 import net.minecraft.block.DispenserBlock;
-import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.client.item.TooltipContext;
 import net.minecraft.client.item.TooltipData;
 import net.minecraft.entity.EquipmentSlot;
@@ -60,7 +59,7 @@ public class PortableChestItem extends TrinketItem implements Equipment {
 
     @Override
     public Optional<TooltipData> getTooltipData(ItemStack stack) {
-        if (!Screen.hasShiftDown()) {
+        if (!AllKeyBindings.VIEW_PORTABLE_CHEST_CONTENTS.isPressed()) {
             return Optional.empty();
         }
 
