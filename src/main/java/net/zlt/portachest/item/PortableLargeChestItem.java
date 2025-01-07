@@ -14,4 +14,14 @@ public class PortableLargeChestItem extends PortableChestItem {
     public void open(PlayerEntity player, ItemStack stack) {
         player.openHandledScreen(new PortableLargeChestScreenHandlerFactory(stack));
     }
+
+    @Override
+    public boolean canBeExtendedWith(ItemStack stack) {
+        return false;
+    }
+
+    @Override
+    public ItemStack getLarge() {
+        return getDefaultStack();
+    }
 }
