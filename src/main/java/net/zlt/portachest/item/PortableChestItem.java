@@ -81,7 +81,9 @@ public class PortableChestItem extends TrinketItem implements Equipment {
 
     @Override
     public void appendTooltip(ItemStack stack, @Nullable World world, List<Text> tooltip, TooltipContext context) {
-        tooltip.add(Text.translatable("item.portachest.portable_chest.hold_for_contents", AllKeyBindings.VIEW_PORTABLE_CHEST_CONTENTS.getBoundKeyLocalizedText()));
+        if (!AllKeyBindings.VIEW_PORTABLE_CHEST_CONTENTS.isPressed()) {
+            tooltip.add(Text.translatable("item.portachest.portable_chest.hold_for_contents", AllKeyBindings.VIEW_PORTABLE_CHEST_CONTENTS.getBoundKeyLocalizedText()));
+        }
     }
 
     public void open(PlayerEntity player, ItemStack stack) {
