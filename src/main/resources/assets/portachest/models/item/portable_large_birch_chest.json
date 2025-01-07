@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "portachest:item/portable_large_birch_chest"
+  }
+}
