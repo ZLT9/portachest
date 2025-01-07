@@ -10,6 +10,7 @@ import net.minecraft.client.gui.screen.ingame.HandledScreens;
 import net.minecraft.text.Text;
 import net.zlt.portachest.compat.Mods;
 import net.zlt.portachest.gui.screen.ingame.PortableChestScreen;
+import net.zlt.portachest.gui.screen.ingame.PortableLargeChestScreen;
 import net.zlt.portachest.networking.AllNetworkingConstants;
 import net.zlt.portachest.option.AllKeyBindings;
 import net.zlt.portachest.screen.AllScreenHandlerTypes;
@@ -23,6 +24,7 @@ public class PortachestClient implements ClientModInitializer {
         }
 
         HandledScreens.register(AllScreenHandlerTypes.PORTABLE_CHEST, PortableChestScreen::new);
+        HandledScreens.register(AllScreenHandlerTypes.PORTABLE_LARGE_CHEST, PortableLargeChestScreen::new);
 
         AllNetworkingConstants.init();
         AllKeyBindings.init();
