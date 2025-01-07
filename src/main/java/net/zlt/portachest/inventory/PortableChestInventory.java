@@ -13,7 +13,7 @@ public class PortableChestInventory implements Inventory {
         return stack.isEmpty() ? new NbtCompound() : stack.writeNbt(new NbtCompound());
     }
 
-    public final ItemStack stack;
+    protected final ItemStack stack;
 
     public PortableChestInventory(ItemStack stack) {
         this.stack = stack;
