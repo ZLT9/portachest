@@ -12,6 +12,7 @@ public final class AllScreenHandlerTypes {
     }
 
     public static final ScreenHandlerType<PortableChestScreenHandler> PORTABLE_CHEST = register("portable_chest", PortableChestScreenHandler::new);
+    public static final ScreenHandlerType<PortableLargeChestScreenHandler> PORTABLE_LARGE_CHEST = register("portable_large_chest", PortableLargeChestScreenHandler::new);
 
     private static <T extends ScreenHandler> ScreenHandlerType<T> register(String id, ScreenHandlerType.Factory<T> factory) {
         return Registry.register(Registries.SCREEN_HANDLER, Portachest.asId(id), new ScreenHandlerType<>(factory, FeatureSet.empty()));
