@@ -95,4 +95,8 @@ public class PortableChestItem extends TrinketItem implements Equipment {
     public boolean canBeExtendedWith(ItemStack stack) {
         return !stack.isEmpty() && stack.isOf(Items.CHEST);
     }
+
+    public ItemStack getLarge() {
+        return AllItems.PORTABLE_LARGE_CHEST.getDefaultStack();
+    }
 }
