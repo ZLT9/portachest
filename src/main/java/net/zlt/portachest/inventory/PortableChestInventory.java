@@ -85,8 +85,4 @@ public class PortableChestInventory implements Inventory {
         stacks.clear();
         Inventories.writeNbt(portableChest.getOrCreateNbt(), stacks);
     }
-
-    public ItemStack getPortableChest() {
-        return portableChest;
-    }
 }
