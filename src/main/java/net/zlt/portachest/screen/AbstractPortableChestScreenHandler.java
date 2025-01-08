@@ -6,6 +6,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.screen.ScreenHandler;
 import net.minecraft.screen.ScreenHandlerType;
 import net.minecraft.screen.slot.Slot;
+import net.zlt.portachest.inventory.PortableChestInventory;
 import net.zlt.portachest.item.PortableChestItem;
 import org.jetbrains.annotations.Nullable;
 
@@ -127,6 +128,11 @@ public abstract class AbstractPortableChestScreenHandler extends ScreenHandler {
         }
 
         return bl;
+    }
+
+    @Nullable
+    public ItemStack getPortableChest() {
+        return inventory instanceof PortableChestInventory portableChestInventory ? portableChestInventory.getPortableChest() : null;
     }
 
     protected abstract int size();
