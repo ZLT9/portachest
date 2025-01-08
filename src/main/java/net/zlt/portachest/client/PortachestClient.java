@@ -11,6 +11,7 @@ import net.minecraft.client.gui.screen.ingame.HandledScreens;
 import net.minecraft.text.Text;
 import net.zlt.portachest.Portachest;
 import net.zlt.portachest.client.gui.screen.ingame.PortableChestScreen;
+import net.zlt.portachest.client.gui.screen.ingame.PortableEnderChestScreen;
 import net.zlt.portachest.client.gui.screen.ingame.PortableLargeChestScreen;
 import net.zlt.portachest.client.gui.tooltip.PortableChestTooltipComponent;
 import net.zlt.portachest.client.item.PortableChestTooltipData;
@@ -29,6 +30,7 @@ public class PortachestClient implements ClientModInitializer {
 
         HandledScreens.register(AllScreenHandlerTypes.PORTABLE_CHEST, PortableChestScreen::new);
         HandledScreens.register(AllScreenHandlerTypes.PORTABLE_LARGE_CHEST, PortableLargeChestScreen::new);
+        HandledScreens.register(AllScreenHandlerTypes.PORTABLE_ENDER_CHEST, PortableEnderChestScreen::new);
 
         TooltipComponentCallback.EVENT.register(data -> data instanceof PortableChestTooltipData portableChestTooltipData ? new PortableChestTooltipComponent(portableChestTooltipData) : null);
 

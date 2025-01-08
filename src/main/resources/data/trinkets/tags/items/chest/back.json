@@ -3,6 +3,7 @@
   "values": [
     "portachest:portable_chest",
     "portachest:portable_large_chest",
+    "portachest:portable_ender_chest",
     "portachest:portable_spruce_chest",
     "portachest:portable_large_spruce_chest",
     "portachest:portable_birch_chest",

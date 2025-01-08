@@ -1,12 +1,22 @@
 package net.zlt.portachest.item;
 
+import net.minecraft.client.item.TooltipContext;
+import net.minecraft.client.item.TooltipData;
+import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
+import net.minecraft.text.Text;
+import net.minecraft.world.World;
 import net.zlt.portachest.Portachest;
 import net.zlt.portachest.compat.Mods;
 import net.zlt.portachest.compat.variantvanillablocks.VariantVanillaBlocks;
+import net.zlt.portachest.screen.PortableEnderChestScreenHandlerFactory;
+import org.jetbrains.annotations.Nullable;
+
+import java.util.List;
+import java.util.Optional;
 
 public final class AllItems {
     private AllItems() {
@@ -14,6 +24,32 @@ public final class AllItems {
 
     public static final Item PORTABLE_CHEST = register("portable_chest", new PortableChestItem(Portachest.asId("textures/entity/portable_chest.png"), new Item.Settings().maxCount(1)));
     public static final Item PORTABLE_LARGE_CHEST = register("portable_large_chest", new PortableLargeChestItem(Portachest.asId("textures/entity/portable_large_chest.png"), new Item.Settings().maxCount(1)));
+
+    public static final Item PORTABLE_ENDER_CHEST = register("portable_ender_chest", new PortableChestItem(Portachest.asId("textures/entity/portable_ender_chest.png"), new Item.Settings().maxCount(1)) {
+        @Override
+        public Optional<TooltipData> getTooltipData(ItemStack stack) {
+            return Optional.empty();
+        }
+
+        @Override
+        public void appendTooltip(ItemStack stack, @Nullable World world, List<Text> tooltip, TooltipContext context) {
+        }
+
+        @Override
+        public void open(PlayerEntity player, ItemStack stack) {
+            player.openHandledScreen(new PortableEnderChestScreenHandlerFactory(stack));
+        }
+
+        @Override
+        public boolean canBeExtendedWith(ItemStack stack) {
+            return false;
+        }
+
+        @Override
+        public ItemStack getLarge() {
+            return ItemStack.EMPTY;
+        }
+    });
 
     public static final Item PORTABLE_SPRUCE_CHEST = register("portable_spruce_chest", new PortableChestItem(Portachest.asId("textures/entity/portable_spruce_chest.png"), new Item.Settings().maxCount(1)) {
         @Override

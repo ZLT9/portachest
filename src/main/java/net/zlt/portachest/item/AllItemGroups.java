@@ -30,6 +30,7 @@ public final class AllItemGroups {
         ItemGroupEvents.modifyEntriesEvent(BASE_KEY).register(itemGroup -> {
             itemGroup.add(AllItems.PORTABLE_CHEST);
             itemGroup.add(AllItems.PORTABLE_LARGE_CHEST);
+            itemGroup.add(AllItems.PORTABLE_ENDER_CHEST);
 
             if (Mods.VARIANT_VANILLA_BLOCKS.isLoaded) {
                 itemGroup.add(AllItems.PORTABLE_SPRUCE_CHEST);
