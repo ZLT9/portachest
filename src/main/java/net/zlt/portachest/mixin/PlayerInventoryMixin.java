@@ -38,15 +38,21 @@ public abstract class PlayerInventoryMixin {
 
     @Inject(method = "removeStack(II)Lnet/minecraft/item/ItemStack;", at = @At(value = "INVOKE", target = "Lnet/minecraft/inventory/Inventories;splitStack(Ljava/util/List;II)Lnet/minecraft/item/ItemStack;"))
     private void portachest$removeStack(int slot, int amount, CallbackInfoReturnable<ItemStack> cir, @Local List<ItemStack> list) {
-        if (player instanceof ServerPlayerEntity serverPlayer && player.currentScreenHandler instanceof AbstractPortableChestScreenHandler portableChestScreenHandler && list.get(slot) == portableChestScreenHandler.getPortableChest()) {
-            serverPlayer.closeHandledScreen();
+        if (player instanceof ServerPlayerEntity serverPlayer && player.currentScreenHandler instanceof AbstractPortableChestScreenHandler portableChestScreenHandler) {
+            ItemStack portableChest = portableChestScreenHandler.getPortableChest();
+            if (portableChest != null && list.get(slot).isOf(portableChest.getItem())) {
+                serverPlayer.closeHandledScreen();
+            }
         }
     }
 
     @Inject(method = "removeStack(I)Lnet/minecraft/item/ItemStack;", at = @At(value = "INVOKE", target = "Lnet/minecraft/util/collection/DefaultedList;set(ILjava/lang/Object;)Ljava/lang/Object;"))
     private void portachest$removeStack(int slot, CallbackInfoReturnable<ItemStack> cir, @Local DefaultedList<ItemStack> defaultedList) {
-        if (player instanceof ServerPlayerEntity serverPlayer && player.currentScreenHandler instanceof AbstractPortableChestScreenHandler portableChestScreenHandler && defaultedList.get(slot) == portableChestScreenHandler.getPortableChest()) {
-            serverPlayer.closeHandledScreen();
+        if (player instanceof ServerPlayerEntity serverPlayer && player.currentScreenHandler instanceof AbstractPortableChestScreenHandler portableChestScreenHandler) {
+            ItemStack portableChest = portableChestScreenHandler.getPortableChest();
+            if (portableChest != null && defaultedList.get(slot).isOf(portableChest.getItem())) {
+                serverPlayer.closeHandledScreen();
+            }
         }
     }
 }
