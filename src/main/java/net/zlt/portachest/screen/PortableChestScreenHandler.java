@@ -3,7 +3,6 @@ package net.zlt.portachest.screen;
 import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.inventory.Inventory;
 import net.minecraft.inventory.SimpleInventory;
-import net.minecraft.screen.slot.Slot;
 
 public class PortableChestScreenHandler extends AbstractPortableChestScreenHandler {
     public PortableChestScreenHandler(int syncId, PlayerInventory playerInventory) {
@@ -24,12 +23,12 @@ public class PortableChestScreenHandler extends AbstractPortableChestScreenHandl
 
         for (int j = 0; j < 3; ++j) {
             for (int k = 0; k < 9; ++k) {
-                addSlot(new Slot(playerInventory, k + j * 9 + 9, 8 + k * 18, 85 + j * 18));
+                addSlot(new PlayerSlot(playerInventory, k + j * 9 + 9, 8 + k * 18, 85 + j * 18));
             }
         }
 
         for (int j = 0; j < 9; ++j) {
-            addSlot(new Slot(playerInventory, j, 8 + j * 18, 143));
+            addSlot(new PlayerSlot(playerInventory, j, 8 + j * 18, 143));
         }
     }
 
