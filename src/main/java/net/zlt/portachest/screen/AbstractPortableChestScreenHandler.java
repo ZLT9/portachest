@@ -141,4 +141,15 @@ public abstract class AbstractPortableChestScreenHandler extends ScreenHandler {
             return !(stack.getItem() instanceof PortableChestItem);
         }
     }
+
+    protected static class PlayerSlot extends Slot {
+        public PlayerSlot(Inventory inventory, int index, int x, int y) {
+            super(inventory, index, x, y);
+        }
+
+        @Override
+        public boolean isEnabled() {
+            return !(getStack().getItem() instanceof PortableChestItem);
+        }
+    }
 }
