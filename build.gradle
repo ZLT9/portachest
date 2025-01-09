@@ -37,6 +37,8 @@ dependencies {
 	modLocalRuntime "dev.emi:emi-fabric:${project.emi_version}"
 
 	modImplementation "net.xanthian:variantvanillablocks:${project.variantvanillablocks_version}"
+
+	modImplementation("com.terraformersmc:modmenu:${project.modmenu_version}")
 }
 
 processResources {
