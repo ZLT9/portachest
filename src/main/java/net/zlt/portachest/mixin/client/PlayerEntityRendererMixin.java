@@ -21,7 +21,7 @@ public abstract class PlayerEntityRendererMixin extends LivingEntityRenderer<Abs
     }
 
     @Inject(method = "<init>", at = @At("RETURN"))
-    private void addPortableChestFeature(EntityRendererFactory.Context ctx, boolean slim, CallbackInfo ci) {
+    private void portachest$addPortableChestFeature(EntityRendererFactory.Context ctx, boolean slim, CallbackInfo ci) {
         addFeature(new PortableChestFeatureRenderer(this));
     }
 }
