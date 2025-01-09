@@ -4,6 +4,8 @@
 
 <p align="center">A Minecraft mod that adds Vanilla-friendly backpacks.</p>
 
+<p align="center">Get it on <a href="https://modrinth.com/project/port-a-chest">Modrinth</a>.</p>
+
 <p align="center">
   <img src="https://github.com/user-attachments/assets/e1c18588-5951-4e7f-bed1-a6cfe35cb62a" alt="Portable Chest Items" />
 </p>
