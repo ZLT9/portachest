@@ -18,16 +18,15 @@
 
 With **Port-a-Chest** you can craft **Portable Chests**, **Portable Large Chests**, and **Portable Ender Chests** that you can wear in your **chest slot** or in your **back [trinket](https://modrinth.com/mod/trinkets) slot**.
 
-To **open** an **equipped Portable Chest**, **press** your configured **keybinding** (B by default).  
+To **open** an **equipped Portable Chest**, **press** your assigned **keybinding** (B by default).  
 To **open** a **held Portable Chest** instead, **right click** while **crouching**.  
-If you have **multiple** Portable Chests, priority goes to the one in your **chest slot**, followed by your **back trinket slot**, **main hand**, and **off hand**.
+If you have **multiple** Portable Chests, priority defaults to the one in your **chest slot**, followed by your **back trinket slot**, **main hand**, and **off hand**. You can configure the priority order through the mod's settings in [Mod Menu](https://modrinth.com/mod/modmenu).
 
 While **hovering** over a Portable Chest, **hold Left Shift** to preview its **contents**.
 
 > **Note:**
 > 
-> If installed alongside [Variant Vanilla Blocks](https://modrinth.com/mod/variant-vanilla-blocks), Port-a-Chest adds portable chests and portable large chests of all Vanilla wood types.  
-> Also, it adds a built-in resource pack to replace the base portable chest and portable large chest with oak variants.
+> When used with [Variant Vanilla Blocks](https://modrinth.com/mod/variant-vanilla-blocks), Port-a-Chest adds Portable Chests and Portable Large Chests for all Vanilla wood types, plus a resource pack to replace the default versions with oak variants.
 
 ## Recipes
 
