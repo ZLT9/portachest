@@ -17,6 +17,9 @@
     ],
     "client": [
       "net.zlt.portachest.client.PortachestClient"
+    ],
+    "emi": [
+      "net.zlt.portachest.compat.emi.PortachestEmiPlugin"
     ]
   },
   "mixins": [
