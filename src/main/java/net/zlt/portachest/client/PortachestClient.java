@@ -17,7 +17,6 @@ import net.zlt.portachest.client.gui.tooltip.PortableChestTooltipComponent;
 import net.zlt.portachest.client.item.PortableChestTooltipData;
 import net.zlt.portachest.client.option.AllKeyBindings;
 import net.zlt.portachest.compat.Mods;
-import net.zlt.portachest.networking.AllNetworkingConstants;
 import net.zlt.portachest.screen.AllScreenHandlerTypes;
 
 @Environment(EnvType.CLIENT)
@@ -34,7 +33,6 @@ public class PortachestClient implements ClientModInitializer {
 
         TooltipComponentCallback.EVENT.register(data -> data instanceof PortableChestTooltipData portableChestTooltipData ? new PortableChestTooltipComponent(portableChestTooltipData) : null);
 
-        AllNetworkingConstants.init();
         AllKeyBindings.init();
     }
 }

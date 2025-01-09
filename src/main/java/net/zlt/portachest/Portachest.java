@@ -27,6 +27,7 @@ public class Portachest implements ModInitializer {
         AllItems.init();
         AllItemGroups.init();
         AllRecipeSerializers.init();
+        AllNetworkingConstants.init();
 
         if (Mods.TRINKETS.isLoaded) {
             Trinkets.init();
