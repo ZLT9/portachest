@@ -26,5 +26,12 @@
   "key.portachest.open_portable_chest": "Open Portable Chest",
   "category.portachest.portachest": "Port-a-Chest",
   "itemGroup.portachest": "Port-a-Chest",
-  "portachest.resource_pack.compat_variantvanillablocks": "Port-a-Chest x Variant Vanilla Blocks"
+  "portachest.resource_pack.compat_variantvanillablocks": "Port-a-Chest x Variant Vanilla Blocks",
+  "screen.portachest.config.title": "Port-a-Chest Settings",
+  "screen.portachest.config.portable_chest_priority": "Portable Chest Priority",
+  "config.portachest.portable_chest_slot_priority_level.vanilla_chest": "Chestplate Slot",
+  "config.portachest.portable_chest_slot_priority_level.trinkets_chest_back": "Back Trinket Slot",
+  "config.portachest.portable_chest_slot_priority_level.trinkets_chest_back.description": "Only used if Trinkets is installed",
+  "config.portachest.portable_chest_slot_priority_level.vanilla_main_hand": "Main Hand",
+  "config.portachest.portable_chest_slot_priority_level.vanilla_off_hand": "Off Hand"
 }

@@ -23,5 +23,12 @@
   "item.portachest.portable_warped_chest": "Cofre distorsionado portátil",
   "item.portachest.portable_large_warped_chest": "Cofre distorsionado grande portátil",
   "item.portachest.portable_chest.hold_for_contents": "Mantén [%s] para ver contenido",
-  "key.portachest.open_portable_chest": "Abrir cofre portátil"
+  "key.portachest.open_portable_chest": "Abrir cofre portátil",
+  "screen.portachest.config.title": "Ajustes de Port-a-Chest",
+  "screen.portachest.config.portable_chest_priority": "Prioridad de cofres portátiles",
+  "config.portachest.portable_chest_slot_priority_level.vanilla_chest": "Ranura de peto",
+  "config.portachest.portable_chest_slot_priority_level.trinkets_chest_back": "Ranura espalda de Trinkets",
+  "config.portachest.portable_chest_slot_priority_level.trinkets_chest_back.description": "Sólo se usa si Trinkets está instalado",
+  "config.portachest.portable_chest_slot_priority_level.vanilla_main_hand": "Mano principal",
+  "config.portachest.portable_chest_slot_priority_level.vanilla_off_hand": "Mano secundaria"
 }
