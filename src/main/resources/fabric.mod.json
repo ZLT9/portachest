@@ -20,6 +20,9 @@
     ],
     "emi": [
       "net.zlt.portachest.compat.emi.PortachestEmiPlugin"
+    ],
+    "modmenu": [
+      "net.zlt.portachest.compat.modmenu.PortachestModMenuApiImpl"
     ]
   },
   "mixins": [
