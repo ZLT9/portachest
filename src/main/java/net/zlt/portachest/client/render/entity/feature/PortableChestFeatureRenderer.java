@@ -2,6 +2,7 @@ package net.zlt.portachest.client.render.entity.feature;
 
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
+import net.minecraft.client.model.Model;
 import net.minecraft.client.network.AbstractClientPlayerEntity;
 import net.minecraft.client.render.OverlayTexture;
 import net.minecraft.client.render.VertexConsumerProvider;
@@ -14,12 +15,11 @@ import net.zlt.portachest.client.render.entity.model.PortableChestModel;
 import net.zlt.portachest.compat.Mods;
 import net.zlt.portachest.compat.trinkets.Trinkets;
 import net.zlt.portachest.item.PortableChestItem;
-import net.zlt.portachest.item.PortableLargeChestItem;
 
 @Environment(EnvType.CLIENT)
 public class PortableChestFeatureRenderer extends FeatureRenderer<AbstractClientPlayerEntity, PlayerEntityModel<AbstractClientPlayerEntity>> {
-    private static final PortableChestModel MODEL = new PortableChestModel(PortableChestModel.getTexturedModelData().createModel());
-    private static final PortableChestModel LARGE_MODEL = new PortableChestModel(PortableChestModel.getLargeTexturedModelData().createModel());
+    public static final PortableChestModel MODEL = new PortableChestModel(PortableChestModel.getTexturedModelData().createModel());
+    public static final PortableChestModel LARGE_MODEL = new PortableChestModel(PortableChestModel.getLargeTexturedModelData().createModel());
 
     public PortableChestFeatureRenderer(FeatureRendererContext<AbstractClientPlayerEntity, PlayerEntityModel<AbstractClientPlayerEntity>> context) {
         super(context);
@@ -42,7 +42,7 @@ public class PortableChestFeatureRenderer extends FeatureRenderer<AbstractClient
         matrices.push();
         matrices.translate(-0.25, 0, 0.125);
         getContextModel().body.rotate(matrices);
-        PortableChestModel model = portableChest instanceof PortableLargeChestItem ? LARGE_MODEL : MODEL;
+        Model model = portableChest.getModel();
         model.render(matrices, vertexConsumers.getBuffer(model.getLayer(portableChest.entityTextureId)), light, OverlayTexture.DEFAULT_UV, 1.0f, 1.0f, 1.0f, 1.0f);
         matrices.pop();
     }

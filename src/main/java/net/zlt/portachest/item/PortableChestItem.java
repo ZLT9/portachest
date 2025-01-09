@@ -1,9 +1,12 @@
 package net.zlt.portachest.item;
 
+import net.fabricmc.api.EnvType;
+import net.fabricmc.api.Environment;
 import net.minecraft.block.DispenserBlock;
 import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.client.item.TooltipContext;
 import net.minecraft.client.item.TooltipData;
+import net.minecraft.client.model.Model;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.*;
@@ -18,6 +21,7 @@ import net.minecraft.util.TypedActionResult;
 import net.minecraft.util.collection.DefaultedList;
 import net.minecraft.world.World;
 import net.zlt.portachest.client.item.PortableChestTooltipData;
+import net.zlt.portachest.client.render.entity.feature.PortableChestFeatureRenderer;
 import net.zlt.portachest.screen.PortableChestScreenHandlerFactory;
 import org.jetbrains.annotations.Nullable;
 
@@ -94,5 +98,10 @@ public class PortableChestItem extends Item implements Equipment {
 
     public ItemStack getLarge() {
         return AllItems.PORTABLE_LARGE_CHEST.getDefaultStack();
+    }
+
+    @Environment(EnvType.CLIENT)
+    public Model getModel() {
+        return PortableChestFeatureRenderer.MODEL;
     }
 }
