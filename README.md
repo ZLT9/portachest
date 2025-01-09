@@ -20,6 +20,8 @@ To **open** an **equipped Portable Chest**, **press** your configured **keybindi
 To **open** a **held Portable Chest** instead, **right click** while **crouching**.  
 If you have **multiple** Portable Chests, priority goes to the one in your **chest slot**, followed by your **back trinket slot**, **main hand**, and **off hand**.
 
+While **hovering** over a Portable Chest, **hold Left Shift** to preview its **contents**.
+
 > **Note:**
 > 
 > If installed alongside [Variant Vanilla Blocks](https://modrinth.com/mod/variant-vanilla-blocks), Port-a-Chest adds portable chests and portable large chests of all Vanilla wood types.  
