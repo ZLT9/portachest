@@ -12,7 +12,7 @@
 
 <div align="center"><a href="https://ko-fi.com/J3J810251V" target="_blank"><img height="60" src="https://storage.ko-fi.com/cdn/kofi2.png?v=6" alt="Buy Me a Coffee at ko-fi.com" /></a></div>
 
-## Items
+## Portable Chests
 
 With **Port-a-Chest** you can craft **Portable Chests**, **Portable Large Chests**, and **Portable Ender Chests** that you can wear in your **chest slot** or in your **back [trinket](https://modrinth.com/mod/trinkets) slot**.
 
