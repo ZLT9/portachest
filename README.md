@@ -8,11 +8,11 @@
   <img src="https://github.com/user-attachments/assets/e1c18588-5951-4e7f-bed1-a6cfe35cb62a" alt="Portable Chest Items" />
 </p>
 
-<p align="center"><img height="400" src="https://github.com/user-attachments/assets/453789c7-3a4d-4a65-ad7a-c06687604868" alt="Port-a-Chest Showcase" /></p>
+<p align="center"><img src="https://github.com/user-attachments/assets/3b24f624-627d-451f-b78c-9e03b6f0c256" alt="Port-a-Chest Showcase" /></p>
 
 <p align="center">If you'd like to support the development of this mod, please consider <a href="https://ko-fi.com/zlt09">donating on Ko-fi</a>!</p>
 
-<div align="center"><a href="https://ko-fi.com/J3J810251V" target="_blank"><img height="80" src="https://storage.ko-fi.com/cdn/kofi2.png?v=6" alt="Buy Me a Coffee at ko-fi.com" /></a></div>
+<div align="center"><a href="https://ko-fi.com/J3J810251V" target="_blank"><img src="https://github.com/user-attachments/assets/b3ce08b0-f5d0-4052-8fdc-a211c76d1726" alt="Buy Me a Coffee at ko-fi.com" /></a></div>
 
 ## Portable Chests
 
