@@ -7,7 +7,10 @@
   "authors": [
     "ZLT"
   ],
-  "contact": {},
+  "contact": {
+    "issues": "https://github.com/ZLT9/portachest/issues",
+    "sources": "https://github.com/ZLT9/portachest"
+  },
   "license": "MIT",
   "icon": "assets/portachest/icon.png",
   "environment": "*",
