@@ -8,6 +8,7 @@ import net.fabricmc.fabric.api.client.networking.v1.ClientPlayNetworking;
 import net.fabricmc.fabric.api.networking.v1.PacketByteBufs;
 import net.minecraft.client.option.KeyBinding;
 import net.minecraft.client.util.InputUtil;
+import net.minecraft.network.PacketByteBuf;
 import net.zlt.portachest.networking.AllNetworkingConstants;
 import org.lwjgl.glfw.GLFW;
 
@@ -26,7 +27,12 @@ public final class AllKeyBindings {
     public static void init() {
         ClientTickEvents.END_CLIENT_TICK.register(client -> {
             while (OPEN_PORTABLE_CHEST.wasPressed()) {
-                ClientPlayNetworking.send(AllNetworkingConstants.OPEN_PORTABLE_CHEST_PACKET_ID, PacketByteBufs.empty());
+                PacketByteBuf buf = PacketByteBufs.create();
+                buf.writeInt(Config.getPortableChestSlotPriorityLevel(0).ordinal());
+                buf.writeInt(Config.getPortableChestSlotPriorityLevel(1).ordinal());
+                buf.writeInt(Config.getPortableChestSlotPriorityLevel(2).ordinal());
+                buf.writeInt(Config.getPortableChestSlotPriorityLevel(3).ordinal());
+                ClientPlayNetworking.send(AllNetworkingConstants.OPEN_PORTABLE_CHEST_PACKET_ID, buf);
             }
         });
     }
