@@ -14,31 +14,31 @@ import net.zlt.portachest.option.PortableChestSlotPriorityLevel;
 @Environment(EnvType.CLIENT)
 public class ConfigScreen extends Screen {
     private final Screen parent;
-    public final ButtonWidget portableChestSlotPriorityLevelButton1 = ButtonWidget.builder(Config.getPortableChestSlotPriorityLevel(0).label, ConfigScreen::noAction)
+    private final ButtonWidget portableChestSlotPriorityLevelButton1 = ButtonWidget.builder(Config.getPortableChestSlotPriorityLevel(0).label, ConfigScreen::noAction)
         .size(200, 20)
         .build();
-    public final ButtonWidget portableChestSlotPriorityLevelButton2 = ButtonWidget.builder(Config.getPortableChestSlotPriorityLevel(1).label, ConfigScreen::noAction)
+    private final ButtonWidget portableChestSlotPriorityLevelButton2 = ButtonWidget.builder(Config.getPortableChestSlotPriorityLevel(1).label, ConfigScreen::noAction)
         .size(200, 20)
         .build();
-    public final ButtonWidget portableChestSlotPriorityLevelButton3 = ButtonWidget.builder(Config.getPortableChestSlotPriorityLevel(2).label, ConfigScreen::noAction)
+    private final ButtonWidget portableChestSlotPriorityLevelButton3 = ButtonWidget.builder(Config.getPortableChestSlotPriorityLevel(2).label, ConfigScreen::noAction)
         .size(200, 20)
         .build();
-    public final ButtonWidget portableChestSlotPriorityLevelButton4 = ButtonWidget.builder(Config.getPortableChestSlotPriorityLevel(3).label, ConfigScreen::noAction)
+    private final ButtonWidget portableChestSlotPriorityLevelButton4 = ButtonWidget.builder(Config.getPortableChestSlotPriorityLevel(3).label, ConfigScreen::noAction)
         .size(200, 20)
         .build();
-    public final ButtonWidget[] portableChestSlotPriorityLevelButtons = {
+    private final ButtonWidget[] portableChestSlotPriorityLevelButtons = {
         portableChestSlotPriorityLevelButton1,
         portableChestSlotPriorityLevelButton2,
         portableChestSlotPriorityLevelButton3,
         portableChestSlotPriorityLevelButton4
     };
-    public final ArrowButtonWidget downArrowButton1 = createDownArrowButton(button -> swapPortableChestSlotPriorityLevels(0, 1));
-    public final ArrowButtonWidget upArrowButton2 = createUpArrowButton(button -> swapPortableChestSlotPriorityLevels(0, 1));
-    public final ArrowButtonWidget downArrowButton2 = createDownArrowButton(button -> swapPortableChestSlotPriorityLevels(1, 2));
-    public final ArrowButtonWidget upArrowButton3 = createUpArrowButton(button -> swapPortableChestSlotPriorityLevels(1, 2));
-    public final ArrowButtonWidget downArrowButton3 = createDownArrowButton(button -> swapPortableChestSlotPriorityLevels(2, 3));
-    public final ArrowButtonWidget upArrowButton4 = createUpArrowButton(button -> swapPortableChestSlotPriorityLevels(2, 3));
-    public final ButtonWidget doneButton = ButtonWidget.builder(Text.translatable("gui.done"), button -> close())
+    private final ArrowButtonWidget downArrowButton1 = createDownArrowButton(button -> swapPortableChestSlotPriorityLevels(0, 1));
+    private final ArrowButtonWidget upArrowButton2 = createUpArrowButton(button -> swapPortableChestSlotPriorityLevels(0, 1));
+    private final ArrowButtonWidget downArrowButton2 = createDownArrowButton(button -> swapPortableChestSlotPriorityLevels(1, 2));
+    private final ArrowButtonWidget upArrowButton3 = createUpArrowButton(button -> swapPortableChestSlotPriorityLevels(1, 2));
+    private final ArrowButtonWidget downArrowButton3 = createDownArrowButton(button -> swapPortableChestSlotPriorityLevels(2, 3));
+    private final ArrowButtonWidget upArrowButton4 = createUpArrowButton(button -> swapPortableChestSlotPriorityLevels(2, 3));
+    private final ButtonWidget doneButton = ButtonWidget.builder(Text.translatable("gui.done"), button -> close())
         .size(200, 20)
         .build();
 
