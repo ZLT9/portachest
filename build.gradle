@@ -33,6 +33,9 @@ dependencies {
 
 	modImplementation "dev.emi:trinkets:${project.trinkets_version}"
 
+	modCompileOnly "dev.emi:emi-fabric:${project.emi_version}:api"
+	modLocalRuntime "dev.emi:emi-fabric:${project.emi_version}"
+
 	modImplementation "net.xanthian:variantvanillablocks:${project.variantvanillablocks_version}"
 }
 
