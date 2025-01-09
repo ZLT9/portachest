@@ -18,7 +18,7 @@ import org.slf4j.LoggerFactory;
 
 public class Portachest implements ModInitializer {
     public static final String MOD_ID = "portachest";
-    public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
+    public static final Logger LOGGER = LoggerFactory.getLogger("Port-a-Chest");
 
     @Override
     public void onInitialize() {
