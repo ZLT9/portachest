@@ -29,6 +29,7 @@
   "portachest.resource_pack.compat_variantvanillablocks": "Port-a-Chest x Variant Vanilla Blocks",
   "screen.portachest.config.title": "Ajustes de Port-a-Chest",
   "screen.portachest.config.portable_chest_priority": "Prioridad de cofres portátiles",
+  "screen.portachest.config.donate": "Donar",
   "config.portachest.portable_chest_slot_priority_level.vanilla_chest": "Ranura de pechera",
   "config.portachest.portable_chest_slot_priority_level.trinkets_chest_back": "Ranura espalda de Trinkets",
   "config.portachest.portable_chest_slot_priority_level.trinkets_chest_back.description": "Sólo se usa si Trinkets está instalado",

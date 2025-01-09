@@ -7,6 +7,7 @@ import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.client.gui.tooltip.Tooltip;
 import net.minecraft.client.gui.widget.ButtonWidget;
 import net.minecraft.text.Text;
+import net.minecraft.util.Util;
 import net.zlt.portachest.client.gui.widget.ArrowButtonWidget;
 import net.zlt.portachest.client.option.Config;
 import net.zlt.portachest.option.PortableChestSlotPriorityLevel;
@@ -41,6 +42,9 @@ public class ConfigScreen extends Screen {
     private final ButtonWidget doneButton = ButtonWidget.builder(Text.translatable("gui.done"), button -> close())
         .size(200, 20)
         .build();
+    private final ButtonWidget donateButton = ButtonWidget.builder(Text.translatable("screen.portachest.config.donate"), button -> Util.getOperatingSystem().open("https://ko-fi.com/zlt09"))
+        .size(100, 20)
+        .build();
 
     public ConfigScreen(Screen parent) {
         super(Text.translatable("screen.portachest.config.title"));
@@ -72,6 +76,8 @@ public class ConfigScreen extends Screen {
 
         doneButton.setPosition(buttonX, height - 32);
 
+        donateButton.setPosition(width - 120, 9);
+
         addDrawableChild(portableChestSlotPriorityLevelButton1);
         addDrawableChild(portableChestSlotPriorityLevelButton2);
         addDrawableChild(portableChestSlotPriorityLevelButton3);
@@ -85,6 +91,8 @@ public class ConfigScreen extends Screen {
         addDrawableChild(upArrowButton4);
 
         addDrawableChild(doneButton);
+
+        addDrawableChild(donateButton);
     }
 
     @Override
