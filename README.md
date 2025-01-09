@@ -8,7 +8,7 @@
   <img src="https://github.com/user-attachments/assets/e1c18588-5951-4e7f-bed1-a6cfe35cb62a" alt="Portable Chest Items" />
 </p>
 
-<p align="center">If you would like to support the development of this mod, please consider <a href="https://ko-fi.com/zlt09">donating on Ko-fi</a>!</p>
+<p align="center">If you'd like to support the development of this mod, please consider <a href="https://ko-fi.com/zlt09">donating on Ko-fi</a>!</p>
 
 <div align="center"><a href="https://ko-fi.com/J3J810251V" target="_blank"><img height="60" src="https://storage.ko-fi.com/cdn/kofi2.png?v=6" alt="Buy Me a Coffee at ko-fi.com" /></a></div>
 
@@ -18,7 +18,7 @@ With **Port-a-Chest** you can craft **Portable Chests**, **Portable Large Chests
 
 To **open** an **equipped Portable Chest**, **press** your configured **keybinding** (B by default).  
 To **open** a **held Portable Chest** instead, **right click** while **crouching**.  
-If you have **multiple** equipped or held Portable Chests, the one in your **chest slot** will take **priority**, then the one in your **back trinket slot**, then the one in your **main hand**, and finally the one in your **off hand**.
+If you have **multiple** Portable Chests, priority goes to the one in your **chest slot**, followed by your **back trinket slot**, **main hand**, and **off hand**.
 
 > **Note:**
 > 
