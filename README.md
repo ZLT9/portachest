@@ -2,7 +2,7 @@
   <img src="https://github.com/user-attachments/assets/68e165eb-20bf-41b8-81b6-18472bb6fcd6" alt="Port-a-Chest Title" />
 </p>
 
-<p align="center">A Minecraft mod that adds Vanilla-friendly backpacks.</p>
+<p align="center">A Minecraft mod that adds vanilla-friendly backpacks.</p>
 
 <p align="center">Get it on <a href="https://modrinth.com/project/portachest">Modrinth</a>.</p>
 
@@ -28,7 +28,7 @@ While **hovering** over a Portable Chest, **hold Left Shift** to preview its **c
 
 > **Note:**
 > 
-> When used with [Variant Vanilla Blocks](https://modrinth.com/mod/variant-vanilla-blocks), Port-a-Chest adds Portable Chests and Portable Large Chests for all Vanilla wood types, plus a resource pack to replace the default versions with oak variants.
+> When used with [Variant Vanilla Blocks](https://modrinth.com/mod/variant-vanilla-blocks), Port-a-Chest adds Portable Chests and Portable Large Chests for all vanilla wood types, plus a resource pack to replace the default versions with oak variants.
 
 ## Recipes
 
